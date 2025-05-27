@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Bugoff | Effective, Family-Safe Mosquito Protection&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="Bugoff offers scientifically-proven mosquito repellents enhanced with natural oils for superior protection with a pleasant experience."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Poppins', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f5f7e8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.water-based-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f5f7e8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.heavy-duty-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #292929;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #9cb43b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #849a31;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feature-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feature-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scroll-smooth {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="scroll-smooth"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Header --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-white shadow fixed w-full z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4 py-4 flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-2xl font-bold text-green-700"&gt;bugoff.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;nav class="hidden md:flex space-x-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#products" class="font-medium hover:text-green-600 transition"&gt;Products&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#benefits" class="font-medium hover:text-green-600 transition"&gt;Benefits&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#how-to-use" class="font-medium hover:text-green-600 transition"&gt;How to Use&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#about" class="font-medium hover:text-green-600 transition"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#faq" class="font-medium hover:text-green-600 transition"&gt;FAQ&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contact" class="font-medium hover:text-green-600 transition"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="md:hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="mobile-menu-button" class="text-gray-500 hover:text-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-bars text-xl"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Mobile menu --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="mobile-menu" class="md:hidden hidden bg-white px-4 py-4 shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#products" class="font-medium hover:text-green-600 transition"&gt;Products&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#benefits" class="font-medium hover:text-green-600 transition"&gt;Benefits&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#how-to-use" class="font-medium hover:text-green-600 transition"&gt;How to Use&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#about" class="font-medium hover:text-green-600 transition"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#faq" class="font-medium hover:text-green-600 transition"&gt;FAQ&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contact" class="font-medium hover:text-green-600 transition"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero-section pt-24 pb-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 mb-8 md:mb-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1 class="text-4xl md:text-5xl font-bold mb-4"&gt;Effective, Family-Safe &lt;span class="text-green-600"&gt;Mosquito Protection&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-lg mb-6"&gt;Science-backed protection enhanced with natural oils, delivering superior mosquito repellency with a pleasant experience.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex flex-col sm:flex-row gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#products" class="btn-primary text-center"&gt;Explore Products&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#where-to-buy" class="btn-secondary text-center"&gt;Where to Buy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/044150d9-016a-4677-94f2-4a87743864e8_wm" alt="Bugoff Mosquito Repellent Products" class="rounded-lg shadow-lg w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Product Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="products" class="py-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;Our Products&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Water-based Product --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="water-based-section rounded-2xl p-8 mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col md:flex-row items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="md:w-1/2 mb-8 md:mb-0 md:pr-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-2"&gt;Family-Safe Water-Based&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-lg font-medium text-green-700 mb-4"&gt;Enhanced active compound | 6-8 hour protection&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-4"&gt;Our water-based formula is gentle on skin while providing effective protection against mosquitoes and other biting insects.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Key Features:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="list-disc list-inside mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;10% Picaridin active ingredient&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Water-based for a non-greasy feel&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Gentle formula suitable for daily use&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Pleasant scent from natural essential oils&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;DEET-free and safe for the whole family&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Repels:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-4"&gt;Mosquitoes, ticks, biting flies, sand flies, midges, and chiggers. Helps prevent insect-borne diseases.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Price:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xl font-bold mb-4"&gt;RM24.90&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#where-to-buy" class="btn-primary inline-block"&gt;Buy Now&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="md:w-1/2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/044150d9-016a-4677-94f2-4a87743864e8_wm" alt="Bugoff Water-Based Mosquito Repellent" class="rounded-lg shadow-lg w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Heavy-duty Product --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="heavy-duty-section rounded-2xl p-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col md:flex-row items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="md:w-1/2 md:order-2 mb-8 md:mb-0 md:pl-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-2"&gt;Heavy-Duty Oil-Based Outdoor&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-lg font-medium text-yellow-400 mb-4"&gt;Maximum active compound | 8-12 hour protection&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-4"&gt;Our oil-based formula provides maximum protection in challenging outdoor environments with long-lasting effectiveness.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Key Features:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="list-disc list-inside mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;20% Picaridin active ingredient&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Oil-based for maximum durability&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Sweat and water-resistant formula&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Enhanced with coconut oil and essential oils&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;DEET-free with superior protection&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Repels:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-4"&gt;Mosquitoes, ticks, biting flies, sand flies, midges, chiggers, and helps prevent insect-borne diseases such as dengue and malaria.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Price:&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xl font-bold mb-4"&gt;RM46.90&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#where-to-buy" class="btn-primary inline-block"&gt;Buy Now&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="md:w-1/2 md:order-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/044150d9-016a-4677-94f2-4a87743864e8_wm" alt="Bugoff Heavy-Duty Mosquito Repellent" class="rounded-lg shadow-lg w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Benefits Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="benefits" class="py-16 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;Why Choose Bugoff?&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-flask"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Science-Backed Effectiveness&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Our formulas contain Picaridin, a highly effective active ingredient proven to repel mosquitoes and other biting insects for hours.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-leaf"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Enhanced with Natural Oils&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;We've added lemon oil and eucalyptus oil to complement the protection while providing a pleasant scent unlike harsh chemical repellents.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-child"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Family-Friendly Formula&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Our water-based formula is gentle on skin and suitable for the whole family, without the harsh side effects of DEET-based products.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-clock"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Long-Lasting Protection&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Enjoy 8-12 hours of protection with our heavy-duty formula, perfect for outdoor activities and high-risk environments.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-tshirt"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Versatile Application&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Safe to apply on both skin and clothing, providing comprehensive protection since mosquitoes can bite through thin fabrics.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Benefit 6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-shield-alt"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Disease Prevention&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Effective protection against mosquitoes helps prevent dangerous diseases like dengue, malaria, and other insect-borne illnesses.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Certifications --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-16 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-bold mb-6"&gt;Our Certifications&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_generated/ef35c2a6-ff66-48d6-8727-486620e430f5_wm" alt="Bugoff Certifications" class="max-w-full h-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- How to Use Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="how-to-use" class="py-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;How to Use Bugoff&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-4 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Step 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-green-600 text-2xl font-bold"&gt;1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Shake Well&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Shake the bottle well before each use to ensure proper mixing of active ingredients.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Step 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-green-600 text-2xl font-bold"&gt;2&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Fully Compress&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Fully compress the spray nozzle to deliver an even application of the repellent.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Step 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-green-600 text-2xl font-bold"&gt;3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Apply Thoroughly&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Apply to all exposed skin and clothing, as insects can bite through thin fabrics.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Step 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-green-600 text-2xl font-bold"&gt;4&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Reapply When Needed&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Reapply every 6-8 hours (water-based) or 8-12 hours (heavy-duty) as needed.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-12 p-6 bg-yellow-50 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-bold mb-4"&gt;Important Safety Information&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="list-disc list-inside space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;For external use only&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Do not spray in eyes and mouth&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Store in a cool, dry place away from direct sunlight&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Water-based formula is safe for adults and children when used as directed&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Heavy-duty formula is recommended for adults and children over 12 years&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Wash hands after application&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;Discontinue use if irritation occurs&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Where to Buy Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="where-to-buy" class="py-16 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;Where to Buy&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Retail --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-store"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Retail Stores&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;Find Bugoff products at these premium retail locations:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Guardian Pharmacy&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Watsons&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;CARiNG Pharmacy&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Decathlon&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Universal Traveller&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Online --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Online Marketplaces&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;Shop online for convenient delivery:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Shopee&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Lazada&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Our official website&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="btn-primary mt-4 inline-block"&gt;Shop Now&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Direct --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="feature-card bg-white p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-green-600 text-4xl mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-box"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Bulk Orders&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;For business inquiries and bulk orders:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Special wholesale pricing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Corporate gifting options&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Event packages&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#contact" class="btn-primary mt-4 inline-block"&gt;Contact Us&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- About Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about" class="py-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;About Bugoff&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 md:pr-8 mb-8 md:mb-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;Our Story&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;At Bugoff, we believe everyone deserves effective protection from mosquitoes without harsh chemicals or unpleasant experiences. Our journey began with a simple question: why should effective mosquito protection come with downsides like strong chemical smells, skin irritation, or ineffective natural alternatives?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;Founded by a team of researchers and outdoor enthusiasts in Malaysia, we set out to create a better solution. After extensive research and testing, we developed our unique formulas that combine the proven effectiveness of Picaridin with natural oils for enhanced protection and a pleasant experience.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Today, Bugoff offers a range of mosquito repellent products designed to meet different needs – from daily family protection to heavy-duty outdoor adventures – all without the downsides of traditional repellents.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 md:pl-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;Our Mission&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;We're on a mission to revolutionize mosquito protection by providing effective, pleasant-to-use products that are safe for families and the environment.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-xl font-bold mb-2"&gt;Our Values&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Effectiveness:&lt;/strong&gt; We never compromise on protection&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Innovation:&lt;/strong&gt; We continuously improve our formulas&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Safety:&lt;/strong&gt; We prioritize family-friendly ingredients&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Sustainability:&lt;/strong&gt; We minimize environmental impact&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Education:&lt;/strong&gt; We promote awareness about insect-borne diseases&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Bugoff is proudly manufactured in Malaysia by Loyaaa Laboratory &amp; Distribution Sdn Bhd, combining international research with local expertise.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- FAQ Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="faq" class="py-16 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;Frequently Asked Questions&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;What is Picaridin and why is it better than DEET?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Picaridin is a highly effective repellent ingredient that offers comparable protection to DEET but without the downsides. It's odorless, non-greasy, doesn't damage plastics or synthetic fabrics, and is less likely to cause skin irritation. Our formulas use 10-20% Picaridin for reliable protection.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Which Bugoff product should I choose?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;If you need everyday protection for the family, choose our water-based formula with 10% Picaridin. For outdoor adventures, camping, or high-risk areas, choose our heavy-duty oil-based formula with 20% Picaridin for maximum protection.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Is Bugoff safe for children?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Our water-based formula is designed to be family-friendly and is safe for adults and children when used as directed. The heavy-duty formula is recommended for adults and children over 12 years due to its higher concentration of active ingredients.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;How long does protection last?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Our water-based formula provides up to 8 hours of protection, while our heavy-duty formula offers up to 12 hours. However, protection time may vary based on activity level, perspiration, and environmental conditions.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Can I apply Bugoff on clothing?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Yes, both formulations can be safely applied to clothing as well as exposed skin. This provides extra protection since mosquitoes can bite through thin fabrics. Our formulas won't damage most fabrics.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- FAQ Item 6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;Does Bugoff protect against dengue and malaria?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Bugoff repels mosquitoes that can transmit diseases like dengue, malaria, Zika, and other insect-borne illnesses. By preventing mosquito bites, our products help reduce the risk of these diseases.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Contact Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="py-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-center mb-12"&gt;Contact Us&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Contact Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 md:pr-8 mb-8 md:mb-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;Send Us a Message&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="name" class="block mb-2 font-medium"&gt;Your Name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="email" class="block mb-2 font-medium"&gt;Email Address&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="subject" class="block mb-2 font-medium"&gt;Subject&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="text" id="subject" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="message" class="block mb-2 font-medium"&gt;Message&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="submit" class="btn-primary"&gt;Send Message&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Contact Info --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 md:pl-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;Get in Touch&lt;/h3&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Company Address&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Loyaaa Laboratory &amp; Distribution Sdn Bhd&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;123 Jalan Teknologi, Taman Sains&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;47810 Petaling Jaya, Selangor&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Malaysia&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Contact Information&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;i class="fas fa-phone-alt mr-2 text-green-600"&gt;&lt;/i&gt; +60 3-1234 5678&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;i class="fas fa-envelope mr-2 text-green-600"&gt;&lt;/i&gt; info@bugoff.com&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;i class="fas fa-globe mr-2 text-green-600"&gt;&lt;/i&gt; www.bugoff.com&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Business Hours&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Monday - Friday: 9:00 AM - 6:00 PM&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Saturday: 9:00 AM - 1:00 PM&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Sunday &amp; Public Holidays: Closed&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold mb-2"&gt;Follow Us&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="text-2xl text-gray-700 hover:text-green-600 transition"&gt;&lt;i class="fab fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="text-2xl text-gray-700 hover:text-green-600 transition"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="text-2xl text-gray-700 hover:text-green-600 transition"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="text-2xl text-gray-700 hover:text-green-600 transition"&gt;&lt;i class="fab fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Newsletter --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-12 bg-green-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-bold mb-4"&gt;Join Our Newsletter&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-6 max-w-xl mx-auto"&gt;Subscribe to receive updates, seasonal tips, exclusive offers, and mosquito prevention advice.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" placeholder="Your email address" class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary whitespace-nowrap"&gt;Subscribe&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-gray-800 text-white py-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-4 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Column 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;bugoff.&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-4"&gt;Science-backed protection enhanced with natural oils, delivering superior mosquito repellency with a pleasant experience.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;&lt;i class="fab fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;&lt;i class="fab fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Column 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold mb-4"&gt;Quick Links&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#products" class="text-gray-400 hover:text-white transition"&gt;Products&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#benefits" class="text-gray-400 hover:text-white transition"&gt;Benefits&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#how-to-use" class="text-gray-400 hover:text-white transition"&gt;How to Use&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#where-to-buy" class="text-gray-400 hover:text-white transition"&gt;Where to Buy&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#about" class="text-gray-400 hover:text-white transition"&gt;About Us&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#faq" class="text-gray-400 hover:text-white transition"&gt;FAQ&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Column 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold mb-4"&gt;Products&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;Family-Safe Water-Based&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;Heavy-Duty Oil-Based&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;Travel Size (Coming Soon)&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;Family Pack (Coming Soon)&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Column 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold mb-4"&gt;Contact&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-map-marker-alt mt-1 mr-2"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;123 Jalan Teknologi, Taman Sains, 47810 Petaling Jaya, Selangor, Malaysia&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-phone-alt mr-2"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;+60 3-1234 5678&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-envelope mr-2"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;info@bugoff.com&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;© 2025 Bugoff. All rights reserved.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-4 md:mt-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-gray-400 hover:text-white transition mr-4"&gt;Privacy Policy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-gray-400 hover:text-white transition mr-4"&gt;Terms of Service&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-gray-400 hover:text-white transition"&gt;Shipping Policy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Back to Top Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="back-to-top" class="fixed bottom-6 right-6 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;i class="fas fa-arrow-up"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- JavaScript --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Mobile menu toggle</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenuButton = document.getElementById('mobile-menu-button');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenu = document.getElementById('mobile-menu');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>mobileMenuButton.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mobileMenu.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Close mobile menu when clicking a link</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mobileLinks = mobileMenu.querySelectorAll('a');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mobileLinks.forEach(link =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>link.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mobileMenu.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Back to top button</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const backToTopButton = document.getElementById('back-to-top');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.pageYOffset &gt; 300) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backToTopButton.classList.remove('opacity-0', 'invisible');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backToTopButton.classList.add('opacity-100', 'visible');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backToTopButton.classList.remove('opacity-100', 'visible');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backToTopButton.classList.add('opacity-0', 'invisible');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>backToTopButton.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.scrollTo({</p>
+<p class="p1"><span class="Apple-converted-space">                </span>top: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>behavior: 'smooth'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
