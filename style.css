@@ -1,206 +1,220 @@
 /* --- Global Styles & Base Setup --- */
+/* Import the 'Inter' font from Google Fonts for accurate typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif; /* Primary font from mockup */
+    font-family: 'Inter', sans-serif; /* Use Inter as the primary font */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.6; /* Standard line height for readability */
     color: #333; /* Dark grey for general text */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Prevent horizontal scroll from overflow */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering for webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smoother font rendering for Firefox on macOS */
+    overflow-x: hidden; /* Prevent horizontal scroll bar if content overflows */
+}
+
+/* Base styles for anchors (links) to reset default browser styles */
+a {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit color from parent by default */
 }
 
 /* Container for Centering Content */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Maximum width of the content area */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Padding on left/right to prevent content touching edges */
 }
 
-/* Anchor point adjustments for fixed header */
+/* Anchor point adjustments for smooth scrolling with fixed header */
 html {
-    scroll-padding-top: 80px; /* Adjust this value based on your header's height */
+    scroll-padding-top: 76px; /* Adjust this value based on your header's actual height */
 }
+
 
 /* --- Header Section --- */
 .site-header {
-    background-color: #f7f7f7; /* Light grey background */
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    position: sticky; /* Make header sticky */
-    top: 0;
-    z-index: 1000; /* Ensure header stays on top of other content */
+    background-color: #f7f7f7; /* Light grey background for header */
+    padding: 15px 0; /* Vertical padding, no horizontal (container handles it) */
+    border-bottom: 1px solid #eee; /* Light border at the bottom */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    position: sticky; /* Makes the header "sticky" at the top as you scroll */
+    top: 0; /* Sticks to the very top */
+    z-index: 1000; /* Ensures header stays on top of other content when scrolling */
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 15px; /* Spacing between logo and nav on wrap */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Puts logo on left, nav on right */
+    align-items: center; /* Vertically centers logo and nav */
+    flex-wrap: wrap; /* Allows items to wrap onto a new line on smaller screens */
+    gap: 15px; /* Spacing between logo and nav if they wrap */
 }
 
 .logo a {
-    font-size: 1.8rem;
+    font-size: 1.875rem; /* ~30px - Large size for logo */
     font-weight: 700; /* Bold */
-    color: #4CAF50; /* Green color for logo */
-    text-decoration: none;
-    text-transform: uppercase;
+    color: #4CAF50; /* Green color for logo text */
+    text-transform: uppercase; /* All caps */
+    letter-spacing: 0.05em; /* Small letter spacing for style */
 }
 
 .main-nav ul {
-    list-style: none;
+    list-style: none; /* Remove bullet points from list */
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Use flexbox for horizontal navigation items */
     gap: 25px; /* Spacing between nav items */
 }
 
 .main-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 500; /* Medium weight */
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    color: #555; /* Default nav item color */
+    font-weight: 500; /* Medium weight for nav text */
+    font-size: 1rem; /* Base font size for nav */
+    transition: color 0.3s ease; /* Smooth color transition on hover/focus */
+    padding: 5px 0; /* Add some vertical padding for clickable area */
+    display: block; /* Make the whole padding area clickable */
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a:focus {
-    color: #4CAF50; /* Green on hover */
+    color: #45a049; /* Darker green on hover/focus */
 }
 
 /* --- Hero Section --- */
 .hero-section {
+    /* Background image from the mockup, centered, covering the area */
     background: url('https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/f8f90264-a634-4537-881c-29d71c1b18d8_wm') no-repeat center center/cover;
-    color: #fff;
+    color: #fff; /* White text for contrast */
     text-align: center;
-    padding: 150px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh; /* Minimum height for responsiveness */
-    position: relative;
+    padding: 180px 20px; /* Generous vertical padding */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    min-height: 70vh; /* Minimum height for the hero section (70% of viewport height) */
+    position: relative; /* Needed for the pseudo-element overlay */
     overflow: hidden; /* Ensure image doesn't overflow */
 }
 
-.hero-section::before { /* Dark overlay for better text readability */
+.hero-section::before { /* Dark overlay for better text readability on the image */
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* 40% opaque black overlay */
+    background-color: rgba(0, 0, 0, 0.45); /* Slightly darker overlay (45% opaque black) */
     z-index: 0; /* Keep behind content */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1; /* Bring content to front of overlay */
-    max-width: 800px;
+    position: relative; /* Bring content to front of overlay */
+    z-index: 1;
+    max-width: 900px; /* Limit content width for better readability */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 3.8rem; /* Large font size for main heading */
+    font-weight: 700; /* Bold */
+    margin-bottom: 25px; /* Spacing below heading */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Stronger text shadow */
     line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    font-size: 1.5rem; /* Larger font size for sub-text */
+    margin-bottom: 40px; /* Spacing below sub-text */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Text shadow for sub-text */
 }
 
 .hero-content button {
     background-color: #4CAF50; /* Green button */
     color: white;
-    padding: 15px 30px;
+    padding: 18px 35px; /* Generous padding for button */
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 1.15rem; /* Font size for button text */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700; /* Bold button text */
+    letter-spacing: 0.03em;
 }
 
 .hero-content button:hover {
     background-color: #45a049; /* Darker green on hover */
-    transform: translateY(-2px);
+    transform: translateY(-3px); /* Subtle lift effect */
 }
 
 /* --- Section Titles & Common Section Styles --- */
 section {
-    padding: 80px 0;
+    padding: 100px 0; /* Consistent vertical padding for all sections */
     text-align: center;
 }
 
 section h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Large font size for section titles */
     color: #333;
-    margin-bottom: 50px;
-    position: relative;
-    padding-bottom: 10px;
-    font-weight: 700;
+    margin-bottom: 60px; /* More spacing below titles */
+    position: relative; /* Needed for the underline effect */
+    padding-bottom: 12px; /* Space for the underline */
+    font-weight: 700; /* Bold */
 }
 
 section h2::after { /* Green underline below section titles */
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: #4CAF50; /* Green underline */
+    left: 50%; /* Center horizontally */
+    bottom: 0; /* Position at the bottom of the heading */
+    transform: translateX(-50%); /* Fine-tune centering */
+    width: 90px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #4CAF50; /* Green color for the underline */
+    border-radius: 2px; /* Slightly rounded ends for the underline */
 }
 
 /* --- About Section --- */
 .about-section {
-    background-color: #fcfcfc; /* Very light grey */
-    padding-bottom: 80px; /* Consistent padding */
+    background-color: #fcfcfc; /* Very light grey background */
 }
 
 .about-content {
-    text-align: left; /* Align text content to left */
+    text-align: left; /* Text alignment within the content */
 }
 
 .about-grid {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Vertically align items */
+    gap: 60px; /* Larger gap between text and image */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: center; /* Center items when wrapped */
 }
 
 .about-text {
-    flex: 1;
-    min-width: 300px; /* Minimum width before wrapping */
-    max-width: 600px; /* Max width for text block */
+    flex: 1; /* Allows text to grow and shrink */
+    min-width: 350px; /* Minimum width before wrapping */
+    max-width: 650px; /* Max width for text block */
+    padding-right: 20px; /* Small buffer for design */
 }
 
 .about-text p {
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly larger text */
     color: #555;
+    line-height: 1.7;
 }
 
 .about-image {
-    flex: 1;
-    min-width: 300px; /* Minimum width before wrapping */
-    text-align: center;
+    flex: 1; /* Allows image to grow and shrink */
+    min-width: 350px; /* Minimum width before wrapping */
+    text-align: center; /* Center image if it doesn't take full width */
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* More pronounced shadow */
 }
 
 /* --- Products Section --- */
@@ -209,17 +223,17 @@ section h2::after { /* Green underline below section titles */
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    display: grid; /* Use CSS Grid for product cards */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Spacing between cards */
     text-align: left;
 }
 
 .product-card {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 35px; /* More padding inside cards */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Subtle shadow */
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: space-between; /* Push bottom content to bottom */
@@ -230,21 +244,375 @@ section h2::after { /* Green underline below section titles */
     color: #333;
     font-size: 1.8rem;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px; /* Spacing below sub-heading */
     font-weight: 700;
 }
 
 .product-card .product-tagline {
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Slightly larger tagline */
     color: #777;
-    margin-bottom: 15px;
+    margin-bottom: 18px; /* Spacing below tagline */
     font-style: italic;
 }
 
 .product-card p {
-    font-size: 1rem;
+    font-size: 1.05rem; /* Slightly larger body text */
     color: #555;
     margin-bottom: 15px;
 }
 
 .product-card h4 {
+    color: #4CAF50;
+    font-size: 1.25rem; /* Slightly larger feature heading */
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.product-card ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin-bottom: 25px; /* Spacing below features list */
+}
+
+.product-card ul li {
+    margin-bottom: 8px;
+    font-size: 0.98rem; /* Slightly larger list item text */
+    color: #555;
+    position: relative;
+    padding-left: 25px; /* Space for checkmark */
+}
+
+.product-card ul li::before { /* Custom checkmark icon */
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 0; /* Align checkmark to top of line */
+    font-weight: bold;
+}
+
+.product-card .product-price {
+    font-size: 1.5rem; /* Larger price text */
+    font-weight: 700; /* Bold price */
+    color: #333;
+    margin-top: auto; /* Pushes price and button to bottom */
+    margin-bottom: 20px;
+}
+
+.product-card .buy-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 28px; /* Slightly more padding for button */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700; /* Bold button text */
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.product-card .buy-button:hover {
+    background-color: #45a049;
+}
+
+.product-card img {
+    max-width: 65%; /* Slightly smaller image within card */
+    height: auto;
+    display: block; /* Ensures margin auto works for centering */
+    margin: 25px auto 0; /* Center image below content, margin-top for spacing */
+    border-radius: 5px;
+}
+
+/* --- Reviews Section --- */
+.reviews-section {
+    background-color: #f7f7f7;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 35px; /* More padding */
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1); /* Slightly more pronounced shadow */
+    text-align: center;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.review-card .review-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px; /* More spacing */
+    line-height: 1.5;
+}
+
+.review-card .reviewer-name {
+    font-weight: 700; /* Bold reviewer name */
+    color: #333;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+/* --- Where to Buy Section --- */
+.buy-section {
+    background-color: #fff;
+}
+
+.buy-content {
+    text-align: center;
+}
+
+.buy-intro {
+    font-size: 1.15rem; /* Slightly larger intro text */
+    margin-bottom: 35px; /* More spacing */
+    color: #555;
+}
+
+.retailer-list {
+    text-align: left; /* Align list content to left within its max-width */
+    margin: 0 auto 35px; /* Center the list block with more spacing */
+    max-width: 600px;
+}
+
+.retailer-list p {
+    font-size: 1.15rem; /* Slightly larger text */
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+.retailer-list ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.retailer-list ul li {
+    margin-bottom: 10px; /* More spacing between list items */
+    font-size: 1.05rem; /* Slightly larger list item text */
+    color: #555;
+}
+
+.retailer-list ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.retailer-list ul li a:hover {
+    text-decoration: underline;
+    color: #45a049;
+}
+
+.contact-info {
+    font-size: 1.15rem; /* Slightly larger contact info */
+    color: #555;
+    margin-top: 40px; /* More spacing */
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #45a049;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background-color: #333; /* Dark background */
+    color: #f7f7f7; /* Light text */
+    padding: 50px 0; /* More padding */
+    text-align: center;
+    font-size: 0.95rem; /* Slightly larger font size */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* More spacing between footer elements */
+}
+
+.footer-logo {
+    font-size: 1.6rem; /* Slightly larger logo in footer */
+    font-weight: 700;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* More spacing between footer nav items */
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #f7f7f7;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.social-media a {
+    color: #f7f7f7;
+    text-decoration: none;
+    margin: 0 12px; /* More spacing between social links */
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+
+.copyright {
+    margin-top: 20px; /* More spacing */
+}
+
+/* --- Responsive Adjustments (Media Queries) --- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack logo and nav vertically */
+        text-align: center;
+        padding: 0 15px; /* Adjust padding for smaller screens */
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 12px; /* Adjust spacing */
+    }
+
+    .main-nav ul li {
+        margin-left: 0; /* Remove left margin for stacked items */
+    }
+
+    .hero-section {
+        padding: 120px 20px; /* Adjust hero padding */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .hero-content button {
+        padding: 15px 30px;
+        font-size: 1.05rem;
+    }
+
+    section {
+        padding: 70px 0; /* Adjust section padding */
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .about-grid {
+        flex-direction: column; /* Stack about text and image */
+        gap: 30px;
+    }
+
+    .about-text, .about-image {
+        min-width: unset; /* Allow elements to shrink */
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products on small screens */
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr; /* Stack reviews on small screens */
+    }
+
+    .footer-nav ul {
+        flex-direction: column; /* Stack footer nav items */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 90px 15px;
+        min-height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-content button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .product-card, .review-card {
+        padding: 25px;
+    }
+
+    .product-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .product-card .product-price {
+        font-size: 1.3rem;
+    }
+
+    .retailer-list {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+    }
+}
