@@ -1,0 +1,250 @@
+/* --- Global Styles & Base Setup --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif; /* Primary font from mockup */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Dark grey for general text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Prevent horizontal scroll from overflow */
+}
+
+/* Container for Centering Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Anchor point adjustments for fixed header */
+html {
+    scroll-padding-top: 80px; /* Adjust this value based on your header's height */
+}
+
+/* --- Header Section --- */
+.site-header {
+    background-color: #f7f7f7; /* Light grey background */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top of other content */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Spacing between logo and nav on wrap */
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700; /* Bold */
+    color: #4CAF50; /* Green color for logo */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Spacing between nav items */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500; /* Medium weight */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+    color: #4CAF50; /* Green on hover */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/f8f90264-a634-4537-881c-29d71c1b18d8_wm') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Minimum height for responsiveness */
+    position: relative;
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.hero-section::before { /* Dark overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% opaque black overlay */
+    z-index: 0; /* Keep behind content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Bring content to front of overlay */
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.hero-content button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-content button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Section Titles & Common Section Styles --- */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+section h2::after { /* Green underline below section titles */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4CAF50; /* Green underline */
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: #fcfcfc; /* Very light grey */
+    padding-bottom: 80px; /* Consistent padding */
+}
+
+.about-content {
+    text-align: left; /* Align text content to left */
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items when wrapped */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    max-width: 600px; /* Max width for text block */
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Products Section --- */
+.products-section {
+    background-color: #eef8ee; /* Light green background */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push bottom content to bottom */
+    height: 100%; /* Ensure cards are same height if grid has equal rows */
+}
+
+.product-card h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.product-card .product-tagline {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-card h4 {
