@@ -91,6 +91,53 @@
         ul {
             list-style: none; /* Override default list styling */
         }
+        /* FAQ accordion styles */
+        details {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            border-color: #1ca376;
+            box-shadow: 0 4px 15px rgba(28, 163, 118, 0.2);
+        }
+        summary {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            padding: 20px 25px;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            user-select: none;
+            color: #2b2c2c;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary:before {
+            content: "\f078"; /* FontAwesome chevron-down icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.3s ease;
+            color: #1ca376;
+        }
+        details[open] summary:before {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        details-content {
+            padding: 0 25px 20px;
+            font-size: 1.1rem; /* 18px */
+            color: #666;
+            line-height: 1.7;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 767px) { /* Styles for screens smaller than 768px (md breakpoint) */
             header nav { display: none !important; } /* Hide desktop nav */
@@ -109,6 +156,9 @@
             .grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; }
             .grid-cols-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; }
             .grid-cols-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; }
+            summary { font-size: 1.1rem; padding: 15px 20px; }
+            summary:before { right: 20px; }
+            details-content { padding: 0 20px 15px; font-size: 1rem; }
         }
         @media (min-width: 768px) {
             header nav { display: flex !important; } /* Show desktop nav */
@@ -178,10 +228,13 @@
 
                 <div style="text-align: center; font-size: 1.3rem; color: #666; line-height: 1.7; max-width: 800px; margin: 0 auto;">
                     <p style="margin-bottom: 20px;">
-                        At Bugoff, we are passionate about providing effective and safe mosquito repellent solutions. Our mission is to help individuals and communities enjoy their outdoor spaces without the nuisance and risks associated with mosquitoes. We combine cutting-edge research with sustainable practices to develop products that are both powerful against pests and gentle on the environment.
+                        At Bugoff, we understand that mosquitoes are more than just a nuisance—they pose serious health risks. Our mission is to provide advanced, reliable, and safe mosquito repellent solutions that allow you and your loved ones to enjoy life outdoors, worry-free.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        Driven by a passion for science and nature, our team of experts combines cutting-edge research with the power of natural ingredients. We believe in creating products that are not only highly effective against mosquitoes and other biting insects but are also gentle on your skin and the environment.
                     </p>
                     <p>
-                        Founded on the principle of a healthier planet, our team is committed to continuous innovation and delivering unparalleled customer satisfaction. Join us in creating a world free from mosquito worries!
+                        Every Bugoff product is rigorously tested to ensure it meets the highest standards of safety and efficacy. We are committed to transparency, quality, and providing you with the peace of mind that comes from superior protection. Choose Bugoff and reclaim your outdoor spaces.
                     </p>
                 </div>
             </div>
@@ -524,6 +577,64 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="background: #f8faf8; border-radius: 20px; margin: 40px 20px; padding: 80px 40px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
+                    Frequently Asked Questions
+                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
+                </h2>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
+                            Is Bugoff safe for children and pets?
+                        </summary>
+                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
+                            Yes, our water-based formula is designed to be safe for the whole family, including children when used as directed. It's DEET-free and enhanced with natural oils. For pets, while generally safe, we recommend consulting a veterinarian for direct application.
+                        </div>
+                    </details>
+
+                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
+                            How long does Bugoff protection last?
+                        </summary>
+                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
+                            Our Family-Safe Water-Based formula provides 6-8 hours of protection, while our Heavy-Duty Oil-Based Outdoor formula offers 8-12 hours of protection, depending on activity and environmental conditions.
+                        </div>
+                    </details>
+
+                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
+                            What is Picaridin, and why do you use it?
+                        </summary>
+                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
+                            Picaridin is a synthetic compound that mimics the natural repellent properties of a plant-derived chemical called piperine. It's recommended by organizations like the CDC and EPA as a highly effective and safe alternative to DEET, offering strong protection against a wide range of biting insects.
+                        </div>
+                    </details>
+
+                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
+                            Can I use Bugoff on my clothing?
+                        </summary>
+                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
+                            Yes, Bugoff can be safely applied to both exposed skin and clothing. Mosquitoes can bite through thin fabrics, so applying to clothing ensures comprehensive protection.
+                        </div>
+                    </details>
+
+                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
+                            Where can I purchase Bugoff products?
+                        </summary>
+                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
+                            You can find Bugoff products at Guardian Pharmacy, Watsons, CARiNG Pharmacy, Decathlon, and Universal Traveller. We are also available online on Shopee, Lazada, and our official website.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Footer -->
         <footer style="background: linear-gradient(135deg, #2b2c2c, #1a1b1b); color: white; padding: 60px 20px 30px; margin-top: 80px; box-sizing: border-box;">
