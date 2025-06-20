@@ -139,12 +139,13 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 767px) { /* Styles for screens smaller than 768px (md breakpoint) */
+        @media (max-width: 767px) { /* Mobile styles */
             header nav {
-                display: none; /* Hidden by default for mobile menu toggle */
+                /* Mobile navigation menu - hidden by default, shown by JS */
+                display: none;
                 flex-direction: column;
-                position: absolute;
-                top: 70px; /* Adjust based on header height */
+                position: absolute; /* Position relative to closest positioned ancestor (header) */
+                top: 70px; /* Aligns below the header */
                 left: 0;
                 width: 100%;
                 background-color: white;
@@ -152,12 +153,13 @@
                 padding-bottom: 10px;
             }
             header nav.mobile-menu-active {
-                display: flex; /* Show mobile nav when active */
+                display: flex; /* Show mobile nav when active class is added by JS */
             }
             header nav ul {
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                padding-left: 0; /* Remove default list padding */
             }
             header nav ul li {
                 width: 100%;
@@ -168,30 +170,37 @@
             header nav ul li:last-child {
                 border-bottom: none;
             }
-            header button { display: block; } /* Show mobile button */
-            h1 { font-size: 2.5rem; } /* Adjust hero heading for smaller screens */
+            header button { display: block; } /* Show mobile hamburger button */
+
+            /* General mobile text and padding adjustments */
+            h1 { font-size: 2.5rem; }
             h1 span { font-size: 2.5rem; }
             p { font-size: 1.125rem; }
             .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
             section { padding-left: 10px; padding-right: 10px; }
             .mx-5 { margin-left: 10px; margin-right: 10px; }
             .hero-section-bg { margin-left: 10px; margin-right: 10px; border-radius: 10px; }
-            /* Product grid responsiveness for smaller screens */
+            
+            /* Grid responsiveness for smaller screens */
             .product-grid-responsive, .benefits-grid-responsive, .how-to-use-grid-responsive, .where-to-buy-grid-responsive, .contact-grid-responsive {
                 grid-template-columns: 1fr;
             }
             .grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
             .grid-cols-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
             .grid-cols-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            
+            /* FAQ specific mobile adjustments */
             summary { font-size: 1.1rem; padding: 15px 20px; }
             summary:before { right: 20px; }
             .details-content { padding: 0 20px 15px; font-size: 1rem; }
         }
-        @media (min-width: 768px) {
-            header nav { display: flex; } /* Show desktop nav */
-            header button { display: none; } /* Hide mobile button */
+        
+        @media (min-width: 768px) { /* Desktop styles */
+            header nav { display: flex !important; } /* Always show desktop nav on desktop */
+            header button { display: none !important; } /* Always hide mobile button on desktop */
         }
-        /* Ensure default grid settings for larger screens */
+        
+        /* Ensure default grid settings for larger screens (Tailwind-like overrides) */
         @media (min-width: 1024px) { /* lg breakpoint */
             .lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
             .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
@@ -340,7 +349,7 @@
                         </p>
 
                         <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Key Features:</h4>
-                        <ul style="margin-bottom: 30px; padding: 0; list-style: none;">
+                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
                             <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> 20% Picaridin active ingredient</li>
                             <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Oil-based for maximum durability</li>
                             <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Sweat and water-resistant formula</li>
@@ -350,7 +359,7 @@
 
                         <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Repels:</h4>
                         <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.7;">
-                            Mosquitoes, ticks, biting flies, sand flies, midges, and chiggers. Helps prevent insect-borne diseases such as dengue and malaria.
+                            Mosquitoes, ticks, biting flies, sand flies, midges, chiggers, and helps prevent insect-borne diseases such as dengue and malaria.
                         </p>
 
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px;">
@@ -519,7 +528,7 @@
                         <p style="color: #666; margin-bottom: 25px;">
                             Find Bugoff products at these premium retail locations:
                         </p>
-                        <ul style="margin-bottom: 25px; padding: 0; list-style: none; text-align: left; display: inline-block;">
+                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Guardian Pharmacy</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Watsons</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> CARiNG Pharmacy</li>
@@ -536,7 +545,7 @@
                         <p style="color: #666; margin-bottom: 25px;">
                             Shop online for convenient delivery:
                         </p>
-                        <ul style="margin-bottom: 25px; padding: 0; list-style: none; text-align: left; display: inline-block;">
+                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Shopee</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Lazada</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Our official website</li>
@@ -554,7 +563,7 @@
                         <p style="color: #666; margin-bottom: 25px;">
                             For business inquiries and bulk orders:
                         </p>
-                        <ul style="margin-bottom: 25px; padding: 0; list-style: none; text-align: left; display: inline-block;">
+                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Special wholesale pricing</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Corporate gifting options</li>
                             <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Event packages</li>
@@ -722,20 +731,42 @@
             const mobileMenuButton = document.getElementById('mobileMenuButton');
             const mainNav = document.getElementById('mainNav');
 
+            // Set initial state for mobile menu on load based on screen size
+            function setInitialMenuDisplay() {
+                if (window.innerWidth >= 768) {
+                    mainNav.style.display = 'flex'; // Desktop: always show nav
+                } else {
+                    mainNav.style.display = 'none';  // Mobile: hide nav by default
+                }
+            }
+
+            // Call on load
+            setInitialMenuDisplay();
+
+            // Handle resize events to adjust menu display
+            window.addEventListener('resize', setInitialMenuDisplay);
+
             if (mobileMenuButton && mainNav) {
                 mobileMenuButton.addEventListener('click', function() {
-                    mainNav.classList.toggle('mobile-menu-active');
+                    // Toggle display directly for mobile menu
+                    if (mainNav.style.display === 'none' || mainNav.style.display === '') {
+                        mainNav.style.display = 'flex';
+                    } else {
+                        mainNav.style.display = 'none';
+                    }
                 });
 
-                // Close mobile menu when a link is clicked
+                // Close mobile menu when a navigation link is clicked
                 mainNav.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', function() {
-                        mainNav.classList.remove('mobile-menu-active');
+                        if (window.innerWidth < 768) { // Only close if on mobile
+                            mainNav.style.display = 'none';
+                        }
                     });
                 });
             }
 
-            // Smooth scroll for anchor links
+            // Smooth scroll for anchor links (already functioning)
             const links = document.querySelectorAll('a[href^="#"]');
             links.forEach(link => {
                 link.addEventListener('click', function(e) {
@@ -750,7 +781,7 @@
                 });
             });
 
-            // Add hover effects via JavaScript
+            // Add hover effects via JavaScript (as inline styles don't support :hover)
             const buttons = document.querySelectorAll('.button-hover-effect');
             const cards = document.querySelectorAll('.card-hover-effect');
 
