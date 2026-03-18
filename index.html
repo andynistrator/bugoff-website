@@ -3,806 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bugoff - Effective Mosquito Protection</title>
+    <title>Bugoff - Family & Outdoor Mosquito Protection</title>
     
-    <!-- External Libraries - These will load correctly with Firebase Hosting / GitHub Pages -->
-    <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Poppins (matches original site's font) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Custom Styles -->
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #2b2c2c; /* General dark text color from original */
-        }
-        /* Specific header background gradient */
-        .header-bg {
-            background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%);
-        }
-        /* Hero section background gradient */
-        .hero-section-bg {
-            background: linear-gradient(135deg, #f8faf8 0%, #e8f5e8 100%);
-        }
-        /* Primary green color for consistency */
-        .color-primary-green {
-            color: #1ca376;
-        }
-        .bg-primary-green-gradient {
-            background: linear-gradient(135deg, #1ca376 0%, #16936a 100%);
-        }
-        .border-primary-green {
-            border-color: #1ca376;
-        }
-        /* Product 1 specific colors */
-        .product1-border {
-            border-color: #1ca376;
-        }
-        .product1-bg {
-            background: linear-gradient(135deg, #d2f2de 0%, #c8eed6 100%);
-        }
-        /* Product 2 specific colors */
-        .product2-border {
-            border-color: #c7b3a0;
-        }
-        .product2-bg {
-            background: linear-gradient(135deg, #f5f1ed 0%, #ebe4db 100%);
-        }
-        .color-product2-accent {
-            color: #826e52;
-        }
-        .bg-product2-accent {
-            background: #826e52;
-        }
-        /* Footer background gradient */
-        .footer-bg {
-            background: linear-gradient(135deg, #2b2c2c, #1a1b1b);
-        }
-
-        /* Hover effects for buttons */
-        .button-hover-effect {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .button-hover-effect:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2); /* Slightly adjusted shadow */
-        }
-        /* Hover effects for cards */
-        .card-hover-effect {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .card-hover-effect:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        /* Ensuring images from placehold.co display correctly */
-        img[src*="placehold.co"] {
-            display: block; /* Prevents extra spacing below images */
-            max-width: 100%; /* Ensures images are responsive within their containers */
-            height: auto; /* Maintains aspect ratio */
-        }
-        /* General list styling for FontAwesome icons */
-        ul {
-            list-style: none; /* Override default list styling */
-        }
-        /* FAQ accordion styles */
-        details {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        details[open] {
-            border-color: #1ca376;
-            box-shadow: 0 4px 15px rgba(28, 163, 118, 0.2);
-        }
-        summary {
-            font-size: 1.25rem; /* 20px */
-            font-weight: 600;
-            padding: 20px 25px;
-            cursor: pointer;
-            outline: none;
-            position: relative;
-            user-select: none;
-            color: #2b2c2c;
-        }
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        summary:before {
-            content: "\f078"; /* FontAwesome chevron-down icon */
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            position: absolute;
-            right: 25px;
-            top: 50%;
-            transform: translateY(-50%) rotate(0deg);
-            transition: transform 0.3s ease;
-            color: #1ca376;
-        }
-        details[open] summary:before {
-            transform: translateY(-50%) rotate(180deg);
-        }
-        .details-content { /* Renamed from details-content as it was conflicting */
-            padding: 0 25px 20px;
-            font-size: 1.1rem; /* 18px */
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767px) { /* Mobile styles */
-            header nav {
-                /* Mobile navigation menu - hidden by default, shown by JS */
-                display: none;
-                flex-direction: column;
-                position: absolute; /* Position relative to closest positioned ancestor (header) */
-                top: 70px; /* Aligns below the header */
-                left: 0;
-                width: 100%;
-                background-color: white;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                padding-bottom: 10px;
-            }
-            header nav.mobile-menu-active {
-                display: flex; /* Show mobile nav when active class is added by JS */
-            }
-            header nav ul {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                padding-left: 0; /* Remove default list padding */
-            }
-            header nav ul li {
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                border-bottom: 1px solid #eee;
-            }
-            header nav ul li:last-child {
-                border-bottom: none;
-            }
-            header button { display: block; } /* Show mobile hamburger button */
-
-            /* General mobile text and padding adjustments */
-            h1 { font-size: 2.5rem; }
-            h1 span { font-size: 2.5rem; }
-            p { font-size: 1.125rem; }
-            .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-            section { padding-left: 10px; padding-right: 10px; }
-            .mx-5 { margin-left: 10px; margin-right: 10px; }
-            .hero-section-bg { margin-left: 10px; margin-right: 10px; border-radius: 10px; }
-            
-            /* Grid responsiveness for smaller screens */
-            .product-grid-responsive, .benefits-grid-responsive, .how-to-use-grid-responsive, .where-to-buy-grid-responsive, .contact-grid-responsive {
-                grid-template-columns: 1fr;
-            }
-            .grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-            .grid-cols-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-            .grid-cols-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-            
-            /* FAQ specific mobile adjustments */
-            summary { font-size: 1.1rem; padding: 15px 20px; }
-            summary:before { right: 20px; }
-            .details-content { padding: 0 20px 15px; font-size: 1rem; }
-        }
+        body { font-family: 'Poppins', sans-serif; color: #2b2c2c; }
+        .color-primary-green { color: #1ca376; }
+        .bg-primary-green { background-color: #1ca376; }
+        .hero-section-bg { background: linear-gradient(135deg, #f8faf8 0%, #e8f5e8 100%); }
         
-        @media (min-width: 768px) { /* Desktop styles */
-            header nav { display: flex !important; } /* Always show desktop nav on desktop */
-            header button { display: none !important; } /* Always hide mobile button on desktop */
+        .product-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9f4 100%);
+            border: 2px solid #1ca376;
         }
-        
-        /* Ensure default grid settings for larger screens (Tailwind-like overrides) */
-        @media (min-width: 1024px) { /* lg breakpoint */
-            .lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .button-hover-effect { transition: all 0.3s ease; }
+        .button-hover-effect:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(28, 163, 118, 0.3); }
+
+        /* Gallery Image Styling */
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        @media (max-width: 767px) {
+            #mainNav { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+            #mainNav.active { display: flex; }
+            #mainNav ul { flex-direction: column; gap: 15px; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Wrapper Div - Start here -->
-    <div style="font-family: 'Poppins', sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #2b2c2c;">
+    <header class="sticky top-0 z-50 bg-white shadow-sm py-4 px-6 flex justify-center">
+        <div class="max-w-6xl w-full flex justify-between items-center">
+            <div class="text-2xl font-bold">bugoff<span class="color-primary-green">.</span></div>
+            <nav id="mainNav" class="md:flex">
+                <ul class="flex gap-8 font-medium text-gray-600">
+                    <li><a href="#home" class="hover:text-green-600">Home</a></li>
+                    <li><a href="#product" class="hover:text-green-600">The Product</a></li>
+                    <li><a href="#how-to-use" class="hover:text-green-600">Usage</a></li>
+                    <li><a href="#about" class="hover:text-green-600">About</a></li>
+                    <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
 
-        <!-- Header/Navigation -->
-        <header style="background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%); box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 20px 20px; margin-bottom: 40px; display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000;">
-            <div style="max-width: 1200px; width: 100%; display: flex; justify-content: space-between; align-items: center;">
-                <!-- Logo -->
-                <div style="font-size: 2rem; font-weight: 700; color: #2b2c2c;">
-                    <a href="#home" style="color: #2b2c2c; text-decoration: none;">
-                        bugoff<span style="color: #1ca376;">.</span>
-                    </a>
+    <section id="home" class="hero-section-bg py-20 px-6 mx-4 my-6 rounded-3xl text-center flex flex-col items-center">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Family & Outdoor<br>
+                <span class="color-primary-green">Skin Moisturizing Protection</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10">
+                Enhanced Icaridin formula with Aloe Vera and natural essential oils. 
+                Providing 8-12 hours of safe, non-sticky protection.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <img src="1-2.jpg" alt="Bugoff Bottle Front" class="h-80 object-contain drop-shadow-2xl">
+                <div class="flex flex-col justify-center gap-4">
+                    <a href="#product" class="bg-primary-green text-white px-10 py-4 rounded-xl font-bold button-hover-effect">View Details</a>
+                    <a href="#contact" class="border-2 border-green-600 text-green-600 px-10 py-4 rounded-xl font-bold button-hover-effect">Where to Buy</a>
                 </div>
-                <!-- Navigation Menu (Desktop & Mobile Toggle) -->
-                <nav id="mainNav" style="display: none; gap: 30px; margin: 0; padding: 0;">
-                    <ul style="display: flex; gap: 30px; margin: 0; padding: 0; list-style: none;">
-                        <li><a href="#products" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">Products</a></li>
-                        <li><a href="#benefits" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">Benefits</a></li>
-                        <li><a href="#how-to-use" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">How to Use</a></li>
-                        <li><a href="#where-to-buy" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">Where to Buy</a></li>
-                        <li><a href="#about" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">About</a></li>
-                        <li><a href="#faq" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">FAQ</a></li>
-                        <li><a href="#contact" style="color: #666; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: color 0.3s;">Contact</a></li>
-                    </ul>
-                </nav>
-                <!-- Mobile Menu Button (Hamburger) -->
-                <button id="mobileMenuButton" style="display: block; color: #666; background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section id="home" style="background: linear-gradient(135deg, #f8faf8 0%, #e8f5e8 100%); padding: 80px 20px; text-align: center; border-radius: 20px; margin: 0 20px 80px; max-width: 1200px; box-sizing: border-box; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h1 style="font-size: 3.5rem; font-weight: 700; color: #2b2c2c; margin-bottom: 24px; line-height: 1.2;">
-                    Effective, Family-Safe<br>
-                    <span style="color: #1ca376;">Mosquito Protection</span>
-                </h1>
-                <p style="font-size: 1.3rem; color: #666; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Science-backed protection enhanced with natural oils, delivering superior mosquito repellency with a pleasant experience.
+    <section id="product" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="1-4.jpg" alt="Product Detail" class="rounded-2xl shadow-xl">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Scientifically Effective, <span class="color-primary-green">Nature-Enhanced</span></h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Our water-based formula is specifically designed for families. Unlike traditional repellents, Bugoff is non-greasy and features a pleasant scent derived from plant-based extracts.
                 </p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="#products" class="button-hover-effect" style="background: linear-gradient(135deg, #1ca376 0%, #16936a 100%); color: white; padding: 18px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(28, 163, 118, 0.3);">Explore Products</a>
-                    <a href="#where-to-buy" class="button-hover-effect" style="border: 2px solid #1ca376; color: #1ca376; padding: 16px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">Where to Buy</a>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> 8 - 12 Hours Protection</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> Enhanced Icaridin (Host Receptor Blocker)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> Safe for Children & Sensitive Skin</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> DEET-Free & Non-Sticky Formula</li>
+                </ul>
+                <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <p class="font-bold text-green-800">Repels:</p>
+                    <p class="text-green-700">Mosquitoes, Fleas, Biting Flies, Sand Flies, Midges, Chiggers, and Ticks.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section id="about" style="padding: 80px 20px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    About Bugoff
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: left;">
-                    <!-- Our Story Column -->
-                    <div>
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 20px;">Our Story</h3>
-                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 15px;">
-                            At Bugoff, we believe everyone deserves effective protection from mosquitoes without harsh chemicals or unpleasant experiences. Our journey began with a simple question: why should effective mosquito protection come with downsides like strong chemical smells, skin irritation, or ineffective natural alternatives?
-                        </p>
-                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 15px;">
-                            Founded by a team of researchers and outdoor enthusiasts in Malaysia, we set out to create a better solution. After extensive research and testing, we developed our unique formulas that combine the proven effectiveness of Icaridin with natural oils for enhanced protection and a pleasant experience.
-                        </p>
-                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Today, Bugoff offers a range of mosquito repellent products designed to meet different needs - from daily family protection to outdoor adventures - all without the downsides of traditional repellents.
-                        </p>
-                    </div>
-                    
-                    <!-- Our Mission & Values Column -->
-                    <div>
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 20px;">Our Mission</h3>
-                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 20px;">
-                            We're on a mission to revolutionize mosquito protection by providing effective, pleasant-to-use products that are safe for families and the environment.
-                        </p>
-
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 20px;">Our Values</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
-                            <li style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 10px;"><strong style="color: #2b2c2c;">• Effectiveness:</strong> We never compromise on protection</li>
-                            <li style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 10px;"><strong style="color: #2b2c2c;">• Innovation:</strong> We continuously improve our formulas</li>
-                            <li style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 10px;"><strong style="color: #2b2c2c;">• Safety:</strong> We prioritize family-friendly ingredients</li>
-                            <li style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 10px;"><strong style="color: #2b2c2c;">• Sustainability:</strong> We minimize environmental impact</li>
-                            <li style="font-size: 1.1rem; color: #666; line-height: 1.7;"><strong style="color: #2b2c2c;">• Education:</strong> We promote awareness about insect-borne diseases</li>
-                        </ul>
-                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Bugoff is proudly manufactured in Malaysia by Legacy Laboratory & Distribution Sdn Bhd, combining international research with local expertise.
-                        </p>
-                    </div>
-                </div>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-center text-3xl font-bold mb-12">Product Showcase</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="1-5.jpg" alt="Angle View" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
+                <img src="1-6.jpg" alt="Bottle Profile" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
+                <img src="1-3.jpg" alt="Back Label & Ingredients" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Products Section -->
-        <section id="products" style="padding: 80px 20px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    Our Products
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div class="lg:grid-cols-2 product-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 40px;">
-
-                    <!-- Family-Safe Water-Based Product -->
-                    <div class="card-hover-effect" style="padding: 40px; border-radius: 20px; border: 3px solid #1ca376; background: linear-gradient(135deg, #d2f2de 0%, #c8eed6 100%); position: relative; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 12px;">Family-Safe Skin Moisturizing</h3>
-                        <p style="color: #1ca376; font-weight: 600; margin-bottom: 20px; font-size: 1.1rem;">Enhanced active compound | 8-12 hour protection</p>
-                        <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.7;">
-                            Our carefully formulised, skin moisturizing combination is gentle on skin while providing effective protection against mosquitoes and other biting insects.
-                        </p>
-
-                        <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Key Features:</h4>
-                        <ul style="margin-bottom: 30px; padding: 0; list-style: none;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #1ca376;"></i> Enhanced Icaridin active ingredient</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #1ca376;"></i> Water-based for a non-greasy feel</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #1ca376;"></i> Gentle formula suitable for daily use</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #1ca376;"></i> Moistures skin with aloe vera and natural essential oils</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #1ca376;"></i> DEET-free and safe for the whole family</li>
-                        </ul>
-
-                        <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Repels:</h4>
-                        <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.7;">
-                            Mosquitoes, ticks, biting flies, sand flies, midges, chiggers, other biting bugs and helps prevent insect-borne diseases such as dengue, malaria & skin diseases.
-                        </p>
-
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px;">
-                            <div style="font-size: 2.2rem; font-weight: 700; color: #1ca376;">RM29.90</div>
-                            <a href="#where-to-buy" class="button-hover-effect" style="background: #1ca376; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <!-- Heavy-Duty Oil-Based Product -->
-                    <div class="card-hover-effect" style="padding: 40px; border-radius: 20px; border: 3px solid #c7b3a0; background: linear-gradient(135deg, #f5f1ed 0%, #ebe4db 100%); position: relative; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 12px;">Heavy-Duty Oil-Based</h3>
-                        <p style="color: #826e52; font-weight: 600; margin-bottom: 20px; font-size: 1.1rem;">Maximum active compound | All-day protection</p>
-                        <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.7;">
-                            Our oil-based formula provides maximum protection in challenging environments with long-lasting effectiveness.
-                        </p>
-
-                        <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Key Features:</h4>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Maximised Icaridin active ingredient</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Oil-based for maximum durability</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Sweat and water-resistant formula</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> Enhanced with virgin coconut oil and essential oils</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666; font-size: 1rem;"><i class="fas fa-check" style="margin-right: 12px; margin-top: 4px; font-size: 1rem; color: #826e52;"></i> DEET-free with superior protection</li>
-                        </ul>
-
-                        <h4 style="font-weight: 600; color: #2b2c2c; margin-bottom: 16px; font-size: 1.2rem;">Repels:</h4>
-                        <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.7;">
-                            Mosquitoes, ticks, biting flies, sand flies, midges, chiggers, other biting bugs and helps prevent insect-borne diseases such as dengue, malaria & skin diseases.
-                        </p>
-
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px;">
-                            <div style="font-size: 2.2rem; font-weight: 700; color: #826e52;">RM54.90</div>
-                            <a href="#where-to-buy" class="button-hover-effect" style="background: #826e52; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
+    <section id="how-to-use" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Usage Guide</h2>
+            <p class="text-gray-600">Simple steps for maximum protection</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+                <h3 class="font-bold mb-2">Shake Well</h3>
+                <p class="text-sm text-gray-500">Always shake the bottle well before use to activate the compound.</p>
             </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section id="benefits" style="background: #f8faf8; border-radius: 20px; margin: 0 20px 40px; padding: 80px 40px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    Why Choose Bugoff?
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div class="lg:grid-cols-3 benefits-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Science-Backed Effectiveness</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Our formulas contain Icaridin, a highly effective active ingredient proven to repel mosquitoes and other biting insects for hours.
-                        </p>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Enhanced with Natural Oils</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            We've added lemon, lavender, extra virgin coconut oil, aloe vera extracts and eucalyptus oil to complement the protection while providing a pleasant scent unlike harsh chemical repellents.
-                        </p>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Family-Friendly Formula</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Our formula focus on gentle to skin, non intrusive scent, and suitable for all families, especially children, without the harsh side effects of DEET-based / overly heavy scented products.
-                        </p>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Long-Lasting Protection</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Enjoy all-day protection with our heavy-duty formula, perfect for any outdoor activities and extreme high-risk environments.
-                        </p>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-spray-can"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Versatile Application</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Safe to apply on both skin and clothing, providing comprehensive protection since mosquitoes can bite through thin fabrics.
-                        </p>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Disease Prevention</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Effective protection against mosquitoes helps prevent dangerous diseases like dengue, malaria, and other insect-borne illnesses.
-                        </p>
-                    </div>
-                </div>
+            <div class="text-center p-6">
+                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+                <h3 class="font-bold mb-2">Fully Compress</h3>
+                <p class="text-sm text-gray-500">Fully compress the spray nozzle for a fine, even mist.</p>
             </div>
-        </section>
-
-        <!-- How to Use Section -->
-        <section id="how-to-use" style="padding: 80px 20px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    How to Use Bugoff
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div class="lg:grid-cols-4 how-to-use-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 60px;">
-
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: 700;">1</div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Shake Well</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Shake the bottle well before each use to ensure proper mixing of active ingredients.
-                        </p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: 700;">2</div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Fully Compress</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Fully compress the spray nozzle to deliver an even application of the repellent.
-                        </p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: 700;">3</div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Apply Thoroughly</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Apply to all exposed skin and clothing, as insects can bite through thin fabrics.
-                        </p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 2rem; font-weight: 700;">4</div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 15px;">Reapply When Needed</h3>
-                        <p style="color: #666; line-height: 1.7;">
-                            Reapply whenever needed after heavy sweats or brushes off.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Safety Information -->
-                <div style="background: linear-gradient(135deg, #f8faf8, #e8f5e8); padding: 40px; border-radius: 15px; border-left: 5px solid #1ca376;">
-                    <h3 style="font-size: 1.6rem; font-weight: 600; color: #2b2c2c; margin-bottom: 25px; display: flex; align-items: center;">
-                        <i class="fas fa-exclamation-triangle" style="color: #f59e0b; margin-right: 10px;"></i>
-                        Important Safety Information
-                    </h3>
-                    <div class="contact-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                        <ul style="padding: 0; margin: 0; list-style: none;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-exclamation-triangle" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> For external use only</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-eye-slash" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> Do not spray in eyes and mouth</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-thermometer-half" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> Store in a cool, dry place away from direct sunlight</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-child" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> Our formula is safe for adults and children when used as directed</li>
-                        </ul>
-                        <ul style="padding: 0; margin: 0; list-style: none;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-hands-wash" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> Always shake well before use</li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; color: #666;"><i class="fas fa-times-circle" style="margin-right: 12px; margin-top: 4px; color: #f59e0b;"></i> Discontinue use if irritation occurs</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="text-center p-6">
+                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+                <h3 class="font-bold mb-2">Apply Thoroughly</h3>
+                <p class="text-sm text-gray-500">Apply to exposed skin and clothing. Reapply as needed.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Where to Buy Section -->
-        <section id="where-to-buy" style="background: #f8faf8; border-radius: 20px; margin: 40px 20px; padding: 80px 40px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    Where to Buy
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div class="lg:grid-cols-3 where-to-buy-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-store"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 20px;">Retail Stores</h3>
-                        <p style="color: #666; margin-bottom: 25px;">
-                            Find Bugoff products at these premium retail locations:
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Guardian Pharmacy</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Watsons</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> CARiNG Pharmacy</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Decathlon</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Universal Traveller</li>
-                        </ul>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 20px;">Online Marketplaces</h3>
-                        <p style="color: #666; margin-bottom: 25px;">
-                            Shop online for convenient delivery:
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Shopee</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Lazada</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Our official website</li>
-                        </ul>
-                        <div style="text-align: center; margin-top: 20px;">
-                            <a href="#" class="button-hover-effect" style="background: linear-gradient(135deg, #1ca376 0%, #16936a 100%); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;">Shop Now</a>
-                        </div>
-                    </div>
-
-                    <div class="card-hover-effect" style="background: white; padding: 40px 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 1px solid rgba(28, 163, 118, 0.1);">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ca376, #16936a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: white; font-size: 1.8rem;">
-                            <i class="fas fa-boxes"></i>
-                        </div>
-                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #2b2c2c; margin-bottom: 20px;">Bulk Orders</h3>
-                        <p style="color: #666; margin-bottom: 25px;">
-                            For business inquiries and bulk orders:
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 25px; text-align: left; display: inline-block;">
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Special wholesale pricing</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Corporate gifting options</li>
-                            <li style="display: flex; align-items: center; margin-bottom: 10px; color: #666; justify-content: flex-start;"><i class="fas fa-check" style="margin-right: 12px; color: #1ca376;"></i> Event packages</li>
-                        </ul>
-                        <div style="text-align: center; margin-top: 20px;">
-                            <a href="#contact" class="button-hover-effect" style="border: 2px solid #1ca376; color: #1ca376; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold mb-4">bugoff<span class="color-primary-green">.</span></div>
+                <p class="text-gray-400">Protecting families from mosquito-borne diseases with science and nature.</p>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" style="padding: 80px 20px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    Contact Us
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                    <h3 style="color: #2b2c2c; margin-bottom: 20px; font-size: 1.5rem; font-weight: 600;">Get in Touch</h3>
-
-                    <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <p style="color: #666; margin-bottom: 20px; line-height: 1.7; font-size: 1.1rem;">
-                            <strong>Legacy Laboratory &amp; Distribution Sdn Bhd</strong><br>
-                            43, Jalan Metro Perdana Timur 10,<br>
-                            Kepong Enterpreneur Park, 52100 Kuala Lumpur, Malaysia
-                        </p>
-
-                        <div class="contact-grid-responsive" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left;">
-                            <div>
-                                <p style="color: #666; margin-bottom: 8px; display: flex; align-items: center;">
-                                    <i class="fas fa-phone" style="color: #1ca376; margin-right: 8px;"></i>
-                                    +60 12 5088 012
-                                </p>
-                                <p style="color: #666; margin-bottom: 8px; display: flex; align-items: center;">
-                                    <i class="fas fa-envelope" style="color: #1ca376; margin-right: 8px;"></i>
-                                    sales@getbugoff.com
-                                </p>
-                                <p style="color: #666; display: flex; align-items: center;">
-                                    <i class="fas fa-globe" style="color: #1ca376; margin-right: 8px;"></i>
-                                    www.getbugoff.com
-                                </p>
-                            </div>
-                            <div>
-                                <p style="color: #666; margin-bottom: 8px; font-weight: 600;">Business Hours:</p>
-                                <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">
-                                    Mon-Fri: 9:00 AM - 6:00 PM<br>
-                                    Saturday: 9:00 AM - 1:00 PM<br>
-                                    Sunday: Closed
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Where to Buy (Re-presenting contact details) -->
-                    <h3 style="color: #2b2c2c; margin-bottom: 20px; font-size: 1.5rem; font-weight: 600;">Where to Buy</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 40px;">
-                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                            <h4 style="color: #1ca376; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600;">Retail Stores</h4>
-                            <p style="color: #666; font-size: 0.9rem;">Guardian, Watsons, CARiNG Pharmacy, Decathlon</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                            <h4 style="color: #1ca376; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600;">Online</h4>
-                            <p style="color: #666; font-size: 0.9rem;">Shopee, Lazada, Official Website</p>
-                        </div>
-                    </div>
-
-                    <a href="mailto:sales@getbugoff.com" class="button-hover-effect" style="background: linear-gradient(135deg, #1ca376 0%, #16936a 100%); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: 600; display: inline-block; margin-top: 15px; box-shadow: 0 4px 15px rgba(28, 163, 118, 0.3);">
-                        Contact Us Now
-                    </a>
-                </div>
+            <div id="contact">
+                <h4 class="font-bold mb-4">Contact Us</h4>
+                <p class="text-gray-400">sales@getbugoff.com</p>
+                <p class="text-gray-400">+60 12 5088 012</p>
             </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" style="background: #f8faf8; border-radius: 20px; margin: 40px 20px; padding: 80px 40px; box-sizing: border-box; max-width: 1200px; margin-left: auto; margin-right: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="text-align: center; font-size: 2.8rem; font-weight: 700; color: #2b2c2c; margin-bottom: 60px; position: relative;">
-                    Frequently Asked Questions
-                    <div style="position: absolute; bottom: -15px; left: 50%; width: 80px; height: 4px; background: linear-gradient(90deg, #1ca376, #16936a); border-radius: 2px; transform: translateX(-50%);"></div>
-                </h2>
-
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
-                            Is Bugoff safe for children and pets?
-                        </summary>
-                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Yes, our formula designed to be safe for the whole family, including children when used as directed. It's DEET-free and enhanced with natural oils. For pets, while generally safe, we recommend consulting a veterinarian for direct application.
-                        </div>
-                    </details>
-
-                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
-                            How long does Bugoff protection last?
-                        </summary>
-                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Our Family & Outdoor Water-Based formula provides 8-12 hours of protection, while our Heavy-Duty Oil-Based Compound formula offers almost entire day of protection, depending on activity and environmental conditions.
-                        </div>
-                    </details>
-
-                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
-                            What is Icaridin, and why do you use it?
-                        </summary>
-                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Icaridin is a synthetic compound that mimics the natural repellent properties of a plant-derived chemical called piperine. It's recommended by organizations like the CDC and EPA as a highly effective and safe alternative to DEET, offering strong protection against a wide range of biting insects.
-                        </div>
-                    </details>
-
-                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
-                            Can I use Bugoff on my clothing?
-                        </summary>
-                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            Yes, Bugoff can be safely applied to both exposed skin and clothing. Mosquitoes and bugs can bite through thin fabrics, so applying to clothing ensures comprehensive protection.
-                        </div>
-                    </details>
-
-                    <details style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                        <summary style="font-size: 1.25rem; font-weight: 600; padding: 20px 25px; cursor: pointer; outline: none; position: relative; user-select: none; color: #2b2c2c;">
-                            Where can I purchase Bugoff products?
-                        </summary>
-                        <div class="details-content" style="padding: 0 25px 20px; font-size: 1.1rem; color: #666; line-height: 1.7;">
-                            You can find Bugoff products at Guardian Pharmacy, Watsons, CARiNG Pharmacy, Decathlon, and Universal Traveller. We are also available online on Shopee, Lazada, and our official website.
-                        </div>
-                    </details>
-                </div>
+            <div>
+                <h4 class="font-bold mb-4">Manufacturer</h4>
+                <p class="text-gray-400">Legacy Laboratory & Distribution Sdn Bhd</p>
+                <p class="text-gray-400">Kuala Lumpur, Malaysia</p>
             </div>
-        </section>
-
-
-        <!-- Footer -->
-        <footer style="background: linear-gradient(135deg, #2b2c2c, #1a1b1b); color: white; padding: 60px 20px 30px; margin-top: 80px; box-sizing: border-box;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <div style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 20px;">
-                        bugoff<span style="color: #1ca376;">.</span>
-                    </div>
-                    <p style="color: #d1d5db; line-height: 1.7; max-width: 600px; margin: 0 auto 25px;">
-                        Science-backed protection enhanced with natural oils, delivering superior mosquito repellency with a pleasant experience.
-                    </p>
-                    <div style="display: flex; gap: 15px; justify-content: center;">
-                        <a href="#" style="color: #d1d5db; text-decoration: none; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" style="color: #d1d5db; text-decoration: none; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: #d1d5db; text-decoration: none; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" style="color: #d1d5db; text-decoration: none; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <!-- Bottom Footer -->
-                <div style="border-top: 1px solid #4b5563; padding-top: 30px; text-align: center;">
-                    <p style="color: #d1d5db; margin: 0;">© 2025 Bugoff. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-    </div> <!-- End of main wrapper div -->
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            © 2025 Bugoff. All rights reserved.
+        </div>
+    </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobileMenuButton');
-            const mainNav = document.getElementById('mainNav');
+        // Mobile Menu
+        const btn = document.getElementById('mobileMenuButton');
+        const nav = document.getElementById('mainNav');
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
 
-            // Set initial state for mobile menu on load based on screen size
-            function setInitialMenuDisplay() {
-                if (window.innerWidth >= 768) {
-                    mainNav.style.display = 'flex'; // Desktop: always show nav
-                } else {
-                    mainNav.style.display = 'none';  // Mobile: hide nav by default
-                }
-            }
-
-            // Call on load
-            setInitialMenuDisplay();
-
-            // Handle resize events to adjust menu display
-            window.addEventListener('resize', setInitialMenuDisplay);
-
-            if (mobileMenuButton && mainNav) {
-                mobileMenuButton.addEventListener('click', function() {
-                    // Toggle display directly for mobile menu
-                    if (mainNav.style.display === 'none' || mainNav.style.display === '') {
-                        mainNav.style.display = 'flex';
-                    } else {
-                        mainNav.style.display = 'none';
-                    }
-                });
-
-                // Close mobile menu when a navigation link is clicked
-                mainNav.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        if (window.innerWidth < 768) { // Only close if on mobile
-                            mainNav.style.display = 'none';
-                        }
-                    });
-                });
-            }
-
-            // Smooth scroll for anchor links (already functioning)
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Add hover effects via JavaScript (as inline styles don't support :hover)
-            const buttons = document.querySelectorAll('.button-hover-effect');
-            const cards = document.querySelectorAll('.card-hover-effect');
-
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    button.style.transform = 'translateY(-2px)';
-                    button.style.boxShadow = '0 6px 20px rgba(0,0,0,0.2)';
-                });
-                button.addEventListener('mouseleave', function() {
-                    button.style.transform = 'translateY(0)';
-                    button.style.boxShadow = '0 4px 15px rgba(28, 163, 118, 0.3)';
-                });
-            });
-
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    card.style.transform = 'translateY(-5px)';
-                    card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
-                });
-                card.addEventListener('mouseleave', function() {
-                    card.style.transform = 'translateY(0)';
-                    card.style.boxShadow = '0 5px 20px rgba(0,0,0,0.08)';
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                nav.classList.remove('active');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
