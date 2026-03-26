@@ -1,47 +1,199 @@
-<section id="science-section" style="font-family: -apple-system, system-ui, sans-serif; max-width: 1000px; margin: 40px auto; padding: 40px 20px; color: #2c3e50;">
-    
-    <div style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-size: 2.2rem; margin-bottom: 10px; color: #1a1a1a;">The Picaridin Protocol</h2>
-        <p style="color: #7f8c8d; font-size: 1.1rem;">Elite protection, backed by global health authorities.</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Off | High-Performance Picaridin Defense</title>
+    <style>
+        :root {
+            --primary: #2e7d32; /* Nature Green */
+            --secondary: #1a1a1a; /* Professional Black */
+            --accent: #0277bd; /* Science Blue */
+            --bg-light: #f8f9fa;
+        }
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px;">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; text-transform: uppercase; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #666; font-size: 0.85rem; font-weight: 600; }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #fff 0%, var(--bg-light) 100%);
+        }
+        .hero-text { flex: 1; min-width: 300px; padding-right: 40px; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; color: var(--secondary); }
+        .hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 30px; }
         
-        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">🧬</div>
-            <h3 style="margin-top: 0; color: #2e7d32;">Nature-Inspired</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6;">Modeled after the <strong>Piperine</strong> compound found in black pepper plants. It effectively "hides" you from mosquitoes without the greasy feel of DEET.</p>
+        /* The "Photo Fixer" */
+        .hero-image { flex: 1; min-width: 300px; position: relative; }
+        .hero-image img { 
+            width: 100%; 
+            border-radius: 20px; 
+            /* This filter adds a 'clinical/premium' look to raw photos */
+            filter: saturate(0.9) contrast(1.1) brightness(1.05); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .photo-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-align: center;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: rotate(15deg);
+        }
+
+        /* Science Section */
+        .science-section { padding: 80px 10%; background: #fff; }
+        .section-tag { color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; display: block; margin-bottom: 10px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: 15px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .card:hover { border-color: var(--primary); background: #fff; transform: translateY(-5px); }
+        .card h3 { margin-top: 15px; color: var(--secondary); }
+
+        /* Verified Sources */
+        .sources-box {
+            margin-top: 60px;
+            padding: 35px;
+            background: var(--secondary);
+            color: #aaa;
+            border-radius: 15px;
+        }
+        .sources-box h4 { color: #fff; margin-top: 0; margin-bottom: 20px; font-size: 1rem; border-left: 3px solid var(--primary); padding-left: 15px; }
+        .source-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+        .source-link { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        .source-link:hover { background: var(--primary); }
+
+        .btn {
+            background: var(--secondary);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--primary); transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero { padding: 40px 5%; text-align: center; }
+            .hero-text { padding-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Bug Off</div>
+        <div class="nav-links">
+            <a href="#science">Evidence</a>
+            <a href="#" class="btn" style="padding: 10px 20px; background: var(--primary);">Shop Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <span class="section-tag">High-Performance Repellent</span>
+            <h1>Nature-Inspired <span style="color:var(--primary)">Shield</span>.</h1>
+            <p>Ditch the greasy DEET. Our 20% Picaridin formula provides 14 hours of defense while remaining safe for your high-end outdoor gear.</p>
+            <a href="#" class="btn">Upgrade Your Protection</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x600" alt="Bug Off Picaridin Spray">
+            <div class="photo-badge">CDC TOP RATED</div>
+        </div>
+    </header>
+
+    <section id="science" class="science-section">
+        <div style="max-width: 800px;">
+            <span class="section-tag">Scientific Summary Report</span>
+            <h2 style="font-size: 2.5rem;">Why Picaridin?</h2>
+            <p style="font-size: 1.1rem; color: #666;">Scientifically known as <em>Icaridin</em>, this molecule is modeled after the natural compounds found in pepper plants. It is the gold standard for travelers who demand high efficacy without chemical smells.</p>
         </div>
 
-        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">⏱️</div>
-            <h3 style="margin-top: 0; color: #1976d2;">14-Hour Shield</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6;">Clinically proven to provide long-lasting protection against mosquitoes and ticks. Rated as a "top-tier" repellent for all-day outdoor exposure.</p>
+        <div class="grid">
+            <div class="card">
+                <span style="font-size: 2rem;">🧬</span>
+                <h3>Bio-Modeled Active</h3>
+                <p>Unlike neurotoxic alternatives, Picaridin works by jamming the olfactory receptors of biting insects, effectively making you "invisible" to mosquitoes and ticks.</p>
+            </div>
+            <div class="card">
+                <span style="font-size: 2rem;">🛡️</span>
+                <h3>Gear Safety</h3>
+                <p>A zero-solvent formula that is safe on <strong>sunglasses, watches, GPS screens, and technical apparel</strong> (Spandex, Rayon, and Gore-Tex).</p>
+            </div>
+            <div class="card">
+                <span style="font-size: 2rem;">⏱️</span>
+                <h3>14-Hour Window</h3>
+                <p>Independent studies confirm that 20% Picaridin provides up to 14 hours of total protection against Mosquitoes and Ticks—surpassing most DEET concentrations.</p>
+            </div>
         </div>
 
-        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">🕶️</div>
-            <h3 style="margin-top: 0; color: #f57f17;">Gear-Safe Formula</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6;">Unlike DEET, Picaridin is 100% safe on synthetic fabrics, watch faces, sunglasses, and high-end outdoor equipment.</p>
+        <div class="sources-box">
+            <h4>Verified Data & Scientific Sources</h4>
+            <div class="source-grid">
+                <a href="https://www.cdc.gov/mosquitoes/prevention/index.html" class="source-link" target="_blank">🔗 CDC Official Guidelines</a>
+                <a href="https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-070705_01-May-05.pdf" class="source-link" target="_blank">🔗 EPA Picaridin Fact Sheet</a>
+                <a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101EWT1.TXT" class="source-link" target="_blank">🔗 14-Hour Field Study Data</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; border: 1px dashed #cbd5e0;">
-        <h4 style="margin-top: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #4a5568;">Verified Scientific Data:</h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-            <a href="https://www.cdc.gov/mosquitoes/prevention/index.html" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
-                🔗 CDC Recommendation
-            </a>
-            <a href="https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-070705_01-May-05.pdf" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
-                🔗 EPA Safety Fact Sheet
-            </a>
-            <a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101EWT1.TXT" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
-                🔗 Efficacy Test Results (20% Picaridin)
-            </a>
-            <a href="https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
-                🔗 WHO Disease Prevention Guidelines
-            </a>
-        </div>
-    </div>
+    <footer style="padding: 60px 10%; text-align: center; border-top: 1px solid #eee; background: #fafafa;">
+        <p style="color: #999; font-size: 0.8rem;">© 2026 Bug Off. Formulated for the Science-Minded Adventurer.</p>
+    </footer>
 
-</section>
+</body>
+</html>
