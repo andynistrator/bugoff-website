@@ -39,8 +39,22 @@
         #bugoff-site-wrapper .science-card { background: white; border-radius: 1.5rem; padding: 2rem; border: 1px solid #e5e7eb; transition: border-color 0.3s; height: 100%; }
         #bugoff-site-wrapper .science-card:hover { border-color: #1ca376; }
         #bugoff-site-wrapper .quality-badge { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 1rem; text-align: center; }
-        #bugoff-site-wrapper .study-link { display: inline-flex; align-items: center; gap: 8px; color: #1ca376; font-weight: 700; font-size: 0.875rem; margin-top: 12px; text-decoration: none; }
-        #bugoff-site-wrapper .study-link:hover { color: #16936a; text-decoration: underline; }
+        
+        /* Wikipedia-style Citation Links */
+        #bugoff-site-wrapper .citation-card { 
+            background: #fdfdfd; 
+            padding: 1.75rem; 
+            border-radius: 1.25rem; 
+            border: 1px solid #f1f5f9; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        #bugoff-site-wrapper .study-summary { font-size: 0.95rem; color: #4b5563; margin-bottom: 1.25rem; line-height: 1.6; }
+        #bugoff-site-wrapper .study-citation { font-size: 0.8rem; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 1rem; margin-top: auto; font-style: italic; }
+        #bugoff-site-wrapper .study-link { color: #1ca376; font-weight: 700; text-decoration: none; display: block; margin-top: 6px; font-style: normal; }
+        #bugoff-site-wrapper .study-link:hover { text-decoration: underline; }
         
         #bugoff-site-wrapper #mainNav.hidden-mobile { display: none; }
         @media (min-width: 768px) { #bugoff-site-wrapper #mainNav.hidden-mobile { display: flex !important; } }
@@ -103,7 +117,7 @@
                     <p class="text-gray-600 mb-6">Bugoff utilizes Icaridin, an advanced active ingredient that acts as a <strong>Host Receptor Blocker</strong>. It effectively masks human scent signatures, making you "invisible" to biting insects.</p>
                     <div class="bg-gray-50 p-4 rounded-xl text-sm mb-4 border-l-4 border-green-500">
                         <p class="font-bold text-gray-800 mb-1">Broad-Spectrum Defense:</p>
-                        <p class="text-gray-500">Proven effective against <strong>Mosquitoes, Ticks, Sand Flies, Fleas, and various other biting bugs</strong>, effectively helping to prevent insect-borne diseases like Dengue, Malaria, and Zika.</p>
+                        <p class="text-gray-500 italic">Proven effective against <strong>Mosquitoes, Ticks, Sand Flies, Fleas, and various other biting bugs</strong>. This powerful barrier effectively helps prevent insect-borne diseases such as <strong>Dengue, Malaria, Zika, and Lyme disease</strong>.</p>
                     </div>
                 </div>
 
@@ -112,75 +126,76 @@
                         <i class="fas fa-leaf text-2xl color-primary-green"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Nature-Enhanced Formula</h3>
-                    <p class="text-gray-600 mb-6">We blend clinical efficacy with botanical extracts to provide a skin-moisturizing barrier that feels as good as it protects.</p>
-                    <ul class="space-y-3 text-sm text-gray-600 mb-6" style="list-style: none; padding: 0;">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Aloe Barbadensis:</strong> Soothes and hydrates.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Citronella & Eucalyptus:</strong> Multi-layered aromatic barriers.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>DEET-Free:</strong> No skin irritation or plastic-melting chemicals.</li>
+                    <p class="text-gray-600 mb-6">A curated blend of premium botanicals designed to protect and nourish your skin simultaneously.</p>
+                    <ul class="space-y-4 text-sm text-gray-600 mb-6" style="list-style: none; padding: 0;">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Aloe Vera:</strong> Calms and hydrates for a smooth, irritation-free feel.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Citronella Extract:</strong> Time-tested botanical shield against aggressive bites.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Eucalyptus Extract:</strong> Natural aromatic barrier with a refreshing cooling effect.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Lavender Extract:</strong> Soothing essence that provides a second layer of defense.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Virgin Coconut Oil:</strong> Locks in moisture and ensures even, silky application.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- PEER-REVIEWED RESEARCH LINKS -->
-            <div class="mb-12">
+            <!-- SCIENTIFIC RESEARCH & JOURNALS (6 Studies) -->
+            <div class="mb-20">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl font-black text-gray-800">Peer-Reviewed Evidence</h3>
-                    <p class="text-gray-500">Direct source links to global health and scientific findings.</p>
+                    <h3 class="text-3xl font-black text-gray-800">Peer-Reviewed Research</h3>
+                    <p class="text-gray-500">Official scientific studies verifying the efficacy and skin-safety profile of our active ingredients.</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Study 1 -->
-                    <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex flex-col">
-                        <span class="text-xs font-bold text-green-600 uppercase tracking-widest bg-green-100 px-3 py-1 rounded-full self-start">WHO Specification (2005)</span>
-                        <h4 class="text-lg font-bold mt-4 mb-2">Tropical Efficacy</h4>
-                        <p class="text-sm text-gray-600 flex-grow">World Health Organization evaluation concluding Icaridin's high efficacy for disease prevention in tropical zones.</p>
-                        <a href="https://apps.who.int/iris/handle/10665/69102" target="_blank" class="study-link">
-                            WHO Full Report <i class="fas fa-external-link-alt text-xs"></i>
-                        </a>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Study 1: Picaridin (WHO) -->
+                    <div class="citation-card">
+                        <p class="study-summary">Independent international specification verifying Icaridin as a highly effective and safe public health repellent, specifically optimized for long-duration use in tropical climates.</p>
+                        <p class="study-citation">
+                            World Health Organization (WHO). "Specifications and evaluations for public health pesticides: Icaridin." Pesticide Evaluation Scheme (WHOPES).
+                            <a href="https://iris.who.int/handle/10665/69102" target="_blank" class="study-link">Source: WHO IRIS (2005) <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
 
-                    <!-- Study 2 -->
-                    <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex flex-col">
-                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full self-start">J. Med. Entomol. (2015)</span>
-                        <h4 class="text-lg font-bold mt-4 mb-2">Tick Repellency</h4>
-                        <p class="text-sm text-gray-600 flex-grow">Journal of Medical Entomology findings on the superior duration of Picaridin protection against Ticks and aggressive biting pests.</p>
-                        <a href="https://academic.oup.com/jme" target="_blank" class="study-link">
-                            View Journal <i class="fas fa-external-link-alt text-xs"></i>
-                        </a>
+                    <!-- Study 2: Picaridin (NPIC) -->
+                    <div class="citation-card">
+                        <p class="study-summary">Comprehensive technical review confirming Picaridin's non-toxic profile, very low skin absorption, and its unique ability to block insect sensors without irritating human skin.</p>
+                        <p class="study-citation">
+                            National Pesticide Information Center (NPIC). "Picaridin Technical Fact Sheet." Oregon State University.
+                            <a href="http://npic.orst.edu/factsheets/archive/Picaridintech.html" target="_blank" class="study-link">Source: NPIC Technical Data <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
 
-                    <!-- Study 3 -->
-                    <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex flex-col">
-                        <span class="text-xs font-bold text-red-600 uppercase tracking-widest bg-red-100 px-3 py-1 rounded-full self-start">CDC Standards (2024)</span>
-                        <h4 class="text-lg font-bold mt-4 mb-2">Dengue Prevention</h4>
-                        <p class="text-sm text-gray-600 flex-grow">CDC guidelines recommending Picaridin as a top active ingredient to prevent Aedes mosquito bites carrying Dengue and Zika.</p>
-                        <a href="https://www.cdc.gov/mosquitoes/prevention/index.html" target="_blank" class="study-link">
-                            CDC Study Link <i class="fas fa-external-link-alt text-xs"></i>
-                        </a>
+                    <!-- Study 3: Eucalyptus -->
+                    <div class="citation-card">
+                        <p class="study-summary">Clinical research identifying Lemon Eucalyptus oil (Eucalyptus citriodora) as a powerful botanical agent providing significant protection times against biting mosquitoes.</p>
+                        <p class="study-citation">
+                            Trigg, J. K. "Evaluation of a eucalyptus-based repellent against Anopheles mosquitoes." Phytotherapy Research / PubMed.
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/8954493/" target="_blank" class="study-link">Source: PubMed ID 8954493 (1996) <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
 
-                    <!-- Study 4 -->
-                    <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex flex-col">
-                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full self-start">NPIC Data (2022)</span>
-                        <h4 class="text-lg font-bold mt-4 mb-2">Safety Profile</h4>
-                        <p class="text-sm text-gray-600 flex-grow">Scientific evidence confirming Icaridin’s odorless, non-irritating, and non-toxic properties for human skin application.</p>
-                        <a href="http://npic.orst.edu/factsheets/PicaridinGen.html" target="_blank" class="study-link">
-                            NPIC Factsheet <i class="fas fa-external-link-alt text-xs"></i>
-                        </a>
+                    <!-- Study 4: Lemon Oil -->
+                    <div class="citation-card">
+                        <p class="study-summary">A scientific review of essential oils confirming that Citrus-derived oils, including Lemon, possess aromatic compounds that effectively disrupt insect questing behaviors.</p>
+                        <p class="study-citation">
+                            Nerio, L. S., et al. "Repellent activity of essential oils: a review." Journal of Bioresource Technology / NIH.
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3059459/" target="_blank" class="study-link">Source: PMC3059459 (2010) <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
 
-                    <!-- Study 5 -->
-                    <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex flex-col">
-                        <span class="text-xs font-bold text-purple-600 uppercase tracking-widest bg-purple-100 px-3 py-1 rounded-full self-start">Clinical Trial (2023)</span>
-                        <h4 class="text-lg font-bold mt-4 mb-2">Sand Fly Efficacy</h4>
-                        <p class="text-sm text-gray-600 flex-grow">PubMed documented clinical trials demonstrating Picaridin's superior efficacy against aggressive sand fly populations in field tests.</p>
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="study-link">
-                            PubMed Search <i class="fas fa-external-link-alt text-xs"></i>
-                        </a>
+                    <!-- Study 5: Aloe Vera -->
+                    <div class="citation-card">
+                        <p class="study-summary">A clinical review documenting Aloe Vera’s pharmaceutical benefits, specifically its ability to moisturize skin, promote healing, and prevent topical inflammation.</p>
+                        <p class="study-citation">
+                            Surjushe, A., et al. "Aloe Vera: A Short Review." Indian Journal of Dermatology / NIH.
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763764/" target="_blank" class="study-link">Source: PMC2763764 (2008) <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
 
-                    <div class="bg-primary-green p-8 rounded-[2rem] text-white flex flex-col justify-center text-center">
-                        <h4 class="text-xl font-black mb-3">Clinically Tested</h4>
-                        <p class="text-sm text-green-50 leading-relaxed">Providing up to 12 hours of protection while remaining gentle enough for children as young as 6 months.</p>
+                    <!-- Study 6: AAP (Pediatric Care) -->
+                    <div class="citation-card">
+                        <p class="study-summary">Official pediatric guidelines recommending Picaridin as a safe, effective, and non-irritating alternative to DEET for infants and children to prevent insect bites.</p>
+                        <p class="study-citation">
+                            "Choosing an Insect Repellent for Your Child." American Academy of Pediatrics (AAP).
+                            <a href="https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Insect-Repellents.aspx" target="_blank" class="study-link">Source: AAP / HealthyChildren (2023) <i class="fas fa-external-link-alt"></i></a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -199,22 +214,22 @@
                     
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="quality-badge">
-                            <i class="fas fa-vial text-green-600 mb-2"></i>
+                            <i class="fas fa-vial text-green-600 mb-2 text-xl"></i>
                             <p class="text-xs font-bold uppercase text-green-700 tracking-wider">Heavy Metals</p>
                             <p class="text-sm font-black text-gray-800">NOT DETECTED</p>
                         </div>
                         <div class="quality-badge">
-                            <i class="fas fa-microbe-slash text-green-600 mb-2"></i>
+                            <i class="fas fa-microbe-slash text-green-600 mb-2 text-xl"></i>
                             <p class="text-xs font-bold uppercase text-green-700 tracking-wider">Microbial</p>
                             <p class="text-sm font-black text-gray-800">NOT DETECTED</p>
                         </div>
                         <div class="quality-badge">
-                            <i class="fas fa-check-double text-green-600 mb-2"></i>
+                            <i class="fas fa-check-double text-green-600 mb-2 text-xl"></i>
                             <p class="text-xs font-bold uppercase text-green-700 tracking-wider">Arsenic & Lead</p>
                             <p class="text-sm font-black text-gray-800">0% CONTENT</p>
                         </div>
                         <div class="quality-badge">
-                            <i class="fas fa-university text-green-600 mb-2"></i>
+                            <i class="fas fa-university text-green-600 mb-2 text-xl"></i>
                             <p class="text-xs font-bold uppercase text-green-700 tracking-wider">Test Provider</p>
                             <p class="text-sm font-black text-gray-800">IMU RESEARCH</p>
                         </div>
@@ -296,7 +311,7 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-20 text-center md:text-left mb-20">
             <div>
                 <div class="text-3xl font-black mb-6">bugoff<span class="color-primary-green">.</span></div>
-                <p class="text-gray-400 text-lg mb-8">Providing smarter protection for families with advanced science and kind-to-skin ingredients.</p>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">Providing smarter protection for families with advanced science and skin-kind ingredients.</p>
                 <div class="flex gap-4 justify-center md:justify-start">
                     <a href="#" target="_blank" class="w-12 h-12 rounded-2xl bg-gray-800 flex items-center justify-center hover:bg-[#1877F2] transition-all button-hover-effect text-white" style="text-decoration: none;">
                         <i class="fab fa-facebook-f text-xl"></i>
