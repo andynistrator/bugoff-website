@@ -55,6 +55,34 @@
         #bugoff-site-wrapper .study-citation { font-size: 0.8rem; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 1rem; margin-top: auto; font-style: italic; }
         #bugoff-site-wrapper .study-link { color: #1ca376; font-weight: 700; text-decoration: none; display: block; margin-top: 6px; font-style: normal; }
         #bugoff-site-wrapper .study-link:hover { text-decoration: underline; }
+
+        /* Step Card Styling */
+        #bugoff-site-wrapper .step-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #f1f5f9;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        #bugoff-site-wrapper .step-card:hover {
+            border-color: #1ca376;
+            transform: translateY(-5px);
+        }
+        #bugoff-site-wrapper .step-number {
+            width: 40px;
+            height: 40px;
+            background: #1ca376;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin: 0 auto 1.5rem auto;
+            box-shadow: 0 4px 10px rgba(28, 163, 118, 0.3);
+        }
         
         #bugoff-site-wrapper #mainNav.hidden-mobile { display: none; }
         @media (min-width: 768px) { #bugoff-site-wrapper #mainNav.hidden-mobile { display: flex !important; } }
@@ -69,6 +97,7 @@
                     <li><a href="#home" class="hover:text-green-600 transition-colors" style="text-decoration: none; color: inherit;">Home</a></li>
                     <li><a href="#science" class="hover:text-green-600 transition-colors" style="text-decoration: none; color: inherit;">Science</a></li>
                     <li><a href="#quality" class="hover:text-green-600 transition-colors" style="text-decoration: none; color: inherit;">Safety</a></li>
+                    <li><a href="#how-to-apply" class="hover:text-green-600 transition-colors" style="text-decoration: none; color: inherit;">Usage</a></li>
                     <li><a href="#order" class="bg-primary-green text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity" style="text-decoration: none;">Shop Now</a></li>
                 </ul>
             </nav>
@@ -249,7 +278,55 @@
         </div>
     </section>
 
-    <!-- 3. Official Stores -->
+    <!-- 3. How to Apply in Steps -->
+    <section id="how-to-apply" class="py-24 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">How to <span class="color-primary-green">Apply</span></h2>
+                <p class="text-gray-500 text-lg">Follow these simple steps for 8-12 hours of total protection.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Shake Well</h4>
+                    <p class="text-sm text-gray-500">Ensure the nature-enhanced active compound is perfectly blended before every use.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Fully Compress</h4>
+                    <p class="text-sm text-gray-500">Fully compress the spray nozzle to release a fine, even mist for maximum coverage.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Spray Exposed Skin</h4>
+                    <p class="text-sm text-gray-500">Apply thoroughly to all exposed areas of the body, avoiding eyes and mouth.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Spray Fabrics Evenly</h4>
+                    <p class="text-sm text-gray-500">Bugs can bite through thin fabrics, so remember to spray on clothing evenly for full defense.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Reapply When Needed</h4>
+                    <p class="text-sm text-gray-500">Maintain your shield by reapplying after heavy sweating or extended outdoor activity.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight">Keep in Cool Place</h4>
+                    <p class="text-sm text-gray-500">Preserve the integrity of the formula by storing your bottle in a cool, dry area away from sunlight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Official Stores -->
     <section id="order" class="py-24 px-6 bg-white border-t border-gray-100">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
