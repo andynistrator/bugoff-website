@@ -1,183 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bugoff - Family & Outdoor Mosquito Protection</title>
+<section id="science-section" style="font-family: -apple-system, system-ui, sans-serif; max-width: 1000px; margin: 40px auto; padding: 40px 20px; color: #2c3e50;">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 10px; color: #1a1a1a;">The Picaridin Protocol</h2>
+        <p style="color: #7f8c8d; font-size: 1.1rem;">Elite protection, backed by global health authorities.</p>
+    </div>
 
-    <style>
-        body { font-family: 'Poppins', sans-serif; color: #2b2c2c; }
-        .color-primary-green { color: #1ca376; }
-        .bg-primary-green { background-color: #1ca376; }
-        .hero-section-bg { background: linear-gradient(135deg, #f8faf8 0%, #e8f5e8 100%); }
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px;">
         
-        .product-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f9f4 100%);
-            border: 2px solid #1ca376;
-        }
-
-        .button-hover-effect { transition: all 0.3s ease; }
-        .button-hover-effect:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(28, 163, 118, 0.3); }
-
-        /* Gallery Image Styling */
-        .gallery-img {
-            width: 100%;
-            height: 300px;
-            object-fit: contain;
-            background: white;
-            border-radius: 12px;
-            padding: 10px;
-        }
-
-        @media (max-width: 767px) {
-            #mainNav { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-            #mainNav.active { display: flex; }
-            #mainNav ul { flex-direction: column; gap: 15px; }
-            h1 { font-size: 2.2rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="sticky top-0 z-50 bg-white shadow-sm py-4 px-6 flex justify-center">
-        <div class="max-w-6xl w-full flex justify-between items-center">
-            <div class="text-2xl font-bold">bugoff<span class="color-primary-green">.</span></div>
-            <nav id="mainNav" class="md:flex">
-                <ul class="flex gap-8 font-medium text-gray-600">
-                    <li><a href="#home" class="hover:text-green-600">Home</a></li>
-                    <li><a href="#product" class="hover:text-green-600">The Product</a></li>
-                    <li><a href="#how-to-use" class="hover:text-green-600">Usage</a></li>
-                    <li><a href="#about" class="hover:text-green-600">About</a></li>
-                    <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
-                </ul>
-            </nav>
-            <button id="mobileMenuButton" class="md:hidden text-2xl">☰</button>
+        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <div style="font-size: 1.5rem; margin-bottom: 10px;">🧬</div>
+            <h3 style="margin-top: 0; color: #2e7d32;">Nature-Inspired</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Modeled after the <strong>Piperine</strong> compound found in black pepper plants. It effectively "hides" you from mosquitoes without the greasy feel of DEET.</p>
         </div>
-    </header>
 
-    <section id="home" class="hero-section-bg py-20 px-6 mx-4 my-6 rounded-3xl text-center flex flex-col items-center">
-        <div class="max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Family & Outdoor<br>
-                <span class="color-primary-green">Skin Moisturizing Protection</span>
-            </h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-10">
-                Enhanced Icaridin formula with Aloe Vera and natural essential oils. 
-                Providing 8-12 hours of safe, non-sticky protection.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <img src="1.jpg" alt="Bugoff Bottle Front" class="h-80 object-contain drop-shadow-2xl">
-                <div class="flex flex-col justify-center gap-4">
-                    <a href="#product" class="bg-primary-green text-white px-10 py-4 rounded-xl font-bold button-hover-effect">View Details</a>
-                    <a href="#contact" class="border-2 border-green-600 text-green-600 px-10 py-4 rounded-xl font-bold button-hover-effect">Where to Buy</a>
-                </div>
-            </div>
+        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <div style="font-size: 1.5rem; margin-bottom: 10px;">⏱️</div>
+            <h3 style="margin-top: 0; color: #1976d2;">14-Hour Shield</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Clinically proven to provide long-lasting protection against mosquitoes and ticks. Rated as a "top-tier" repellent for all-day outdoor exposure.</p>
         </div>
-    </section>
 
-    <section id="product" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="2.png" alt="Product Detail" class="rounded-2xl shadow-xl">
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Scientifically Effective, <span class="color-primary-green">Nature-Enhanced</span></h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Our water-based formula is specifically designed for families. Unlike traditional repellents, Bugoff is non-greasy and features a pleasant scent derived from plant-based extracts.
-                </p>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> 8 - 12 Hours Protection</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> Enhanced Icaridin (Host Receptor Blocker)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> Safe for Children & Sensitive Skin</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle color-primary-green"></i> DEET-Free & Non-Sticky Formula</li>
-                </ul>
-                <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
-                    <p class="font-bold text-green-800">Repels:</p>
-                    <p class="text-green-700">Mosquitoes, Fleas, Biting Flies, Sand Flies, Midges, Chiggers, and Ticks.</p>
-                </div>
-            </div>
+        <div style="background: #fff; border: 1px solid #eee; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <div style="font-size: 1.5rem; margin-bottom: 10px;">🕶️</div>
+            <h3 style="margin-top: 0; color: #f57f17;">Gear-Safe Formula</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Unlike DEET, Picaridin is 100% safe on synthetic fabrics, watch faces, sunglasses, and high-end outdoor equipment.</p>
         </div>
-    </section>
+    </div>
 
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-bold mb-12">Product Showcase</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="3.jpg" alt="Angle View" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
-                <img src="4.jpg" alt="Bottle Profile" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
-                <img src="5.jpg" alt="Back Label & Ingredients" class="gallery-img shadow-sm hover:shadow-md transition-shadow">
-            </div>
+    <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; border: 1px dashed #cbd5e0;">
+        <h4 style="margin-top: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #4a5568;">Verified Scientific Data:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+            <a href="https://www.cdc.gov/mosquitoes/prevention/index.html" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
+                🔗 CDC Recommendation
+            </a>
+            <a href="https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-070705_01-May-05.pdf" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
+                🔗 EPA Safety Fact Sheet
+            </a>
+            <a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101EWT1.TXT" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
+                🔗 Efficacy Test Results (20% Picaridin)
+            </a>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" style="text-decoration: none; background: white; color: #2d3748; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 5px;">
+                🔗 WHO Disease Prevention Guidelines
+            </a>
         </div>
-    </section>
+    </div>
 
-    <section id="how-to-use" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">Usage Guide</h2>
-            <p class="text-gray-600">Simple steps for maximum protection</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center p-6">
-                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
-                <h3 class="font-bold mb-2">Shake Well</h3>
-                <p class="text-sm text-gray-500">Always shake the bottle well before use to activate the compound.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
-                <h3 class="font-bold mb-2">Fully Compress</h3>
-                <p class="text-sm text-gray-500">Fully compress the spray nozzle for a fine, even mist.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="w-12 h-12 bg-primary-green text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
-                <h3 class="font-bold mb-2">Apply Thoroughly</h3>
-                <p class="text-sm text-gray-500">Apply to exposed skin and clothing. Reapply as needed.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-                <div class="text-2xl font-bold mb-4">bugoff<span class="color-primary-green">.</span></div>
-                <p class="text-gray-400">Protecting families from mosquito-borne diseases with science and nature.</p>
-            </div>
-            <div id="contact">
-                <h4 class="font-bold mb-4">Contact Us</h4>
-                <p class="text-gray-400">sales@getbugoff.com</p>
-                <p class="text-gray-400">+60 12 5088 012</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Manufacturer</h4>
-                <p class="text-gray-400">Legacy Laboratory & Distribution Sdn Bhd</p>
-                <p class="text-gray-400">Kuala Lumpur, Malaysia</p>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-            © 2025 Bugoff. All rights reserved.
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu
-        const btn = document.getElementById('mobileMenuButton');
-        const nav = document.getElementById('mainNav');
-        btn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                nav.classList.remove('active');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+</section>
